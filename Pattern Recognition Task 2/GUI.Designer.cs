@@ -73,7 +73,6 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.prior4TextBox = new System.Windows.Forms.TextBox();
             this.prior3TextBox = new System.Windows.Forms.TextBox();
             this.prior2TextBox = new System.Windows.Forms.TextBox();
             this.prior1TextBox = new System.Windows.Forms.TextBox();
@@ -84,6 +83,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.Mu4ComboBox = new System.Windows.Forms.ComboBox();
             this.Mu1ComboBox = new System.Windows.Forms.ComboBox();
+            this.prior4TextBox = new System.Windows.Forms.TextBox();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.Class4 = new System.Windows.Forms.Label();
             this.Class3 = new System.Windows.Forms.Label();
@@ -196,7 +196,7 @@
             this.generatedImagePictureBox.Location = new System.Drawing.Point(276, 6);
             this.generatedImagePictureBox.Name = "generatedImagePictureBox";
             this.generatedImagePictureBox.Size = new System.Drawing.Size(637, 472);
-            this.generatedImagePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.generatedImagePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.generatedImagePictureBox.TabIndex = 41;
             this.generatedImagePictureBox.TabStop = false;
             this.generatedImagePictureBox.Click += new System.EventHandler(this.pictureBox2_Click);
@@ -528,7 +528,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 44.13408F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 55.86592F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 74F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 79F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
             this.tableLayoutPanel1.Controls.Add(this.Mu3ComboBox, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.Mu2ComboBox, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.label11, 3, 3);
@@ -613,7 +613,7 @@
             "255"});
             this.Mu3ComboBox.Location = new System.Drawing.Point(3, 67);
             this.Mu3ComboBox.Name = "Mu3ComboBox";
-            this.Mu3ComboBox.Size = new System.Drawing.Size(72, 21);
+            this.Mu3ComboBox.Size = new System.Drawing.Size(71, 21);
             this.Mu3ComboBox.TabIndex = 65;
             // 
             // Mu2ComboBox
@@ -674,7 +674,7 @@
             "255"});
             this.Mu2ComboBox.Location = new System.Drawing.Point(3, 35);
             this.Mu2ComboBox.Name = "Mu2ComboBox";
-            this.Mu2ComboBox.Size = new System.Drawing.Size(72, 21);
+            this.Mu2ComboBox.Size = new System.Drawing.Size(71, 21);
             this.Mu2ComboBox.TabIndex = 64;
             // 
             // label11
@@ -683,9 +683,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label11.BackColor = System.Drawing.Color.Yellow;
-            this.label11.Location = new System.Drawing.Point(253, 97);
+            this.label11.Location = new System.Drawing.Point(252, 97);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(74, 32);
+            this.label11.Size = new System.Drawing.Size(75, 32);
             this.label11.TabIndex = 23;
             // 
             // label10
@@ -694,9 +694,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label10.BackColor = System.Drawing.Color.Blue;
-            this.label10.Location = new System.Drawing.Point(253, 64);
+            this.label10.Location = new System.Drawing.Point(252, 64);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(74, 33);
+            this.label10.Size = new System.Drawing.Size(75, 33);
             this.label10.TabIndex = 22;
             // 
             // label9
@@ -705,63 +705,56 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label9.BackColor = System.Drawing.Color.Lime;
-            this.label9.Location = new System.Drawing.Point(253, 32);
+            this.label9.Location = new System.Drawing.Point(252, 32);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(74, 32);
+            this.label9.Size = new System.Drawing.Size(75, 32);
             this.label9.TabIndex = 21;
-            // 
-            // prior4TextBox
-            // 
-            this.prior4TextBox.Location = new System.Drawing.Point(179, 100);
-            this.prior4TextBox.Name = "prior4TextBox";
-            this.prior4TextBox.Size = new System.Drawing.Size(67, 20);
-            this.prior4TextBox.TabIndex = 19;
             // 
             // prior3TextBox
             // 
-            this.prior3TextBox.Location = new System.Drawing.Point(179, 67);
+            this.prior3TextBox.Location = new System.Drawing.Point(178, 67);
             this.prior3TextBox.Name = "prior3TextBox";
             this.prior3TextBox.Size = new System.Drawing.Size(67, 20);
             this.prior3TextBox.TabIndex = 18;
             // 
             // prior2TextBox
             // 
-            this.prior2TextBox.Location = new System.Drawing.Point(179, 35);
+            this.prior2TextBox.Location = new System.Drawing.Point(178, 35);
             this.prior2TextBox.Name = "prior2TextBox";
             this.prior2TextBox.Size = new System.Drawing.Size(67, 20);
             this.prior2TextBox.TabIndex = 17;
             // 
             // prior1TextBox
             // 
-            this.prior1TextBox.Location = new System.Drawing.Point(179, 3);
+            this.prior1TextBox.Location = new System.Drawing.Point(178, 3);
             this.prior1TextBox.Name = "prior1TextBox";
             this.prior1TextBox.Size = new System.Drawing.Size(67, 20);
             this.prior1TextBox.TabIndex = 16;
             // 
             // segma1TextBox
             // 
-            this.segma1TextBox.Location = new System.Drawing.Point(81, 3);
+            this.segma1TextBox.Location = new System.Drawing.Point(80, 3);
             this.segma1TextBox.Name = "segma1TextBox";
             this.segma1TextBox.Size = new System.Drawing.Size(80, 20);
             this.segma1TextBox.TabIndex = 12;
             // 
             // segma4TextBox
             // 
-            this.segma4TextBox.Location = new System.Drawing.Point(81, 100);
+            this.segma4TextBox.Location = new System.Drawing.Point(80, 100);
             this.segma4TextBox.Name = "segma4TextBox";
             this.segma4TextBox.Size = new System.Drawing.Size(80, 20);
             this.segma4TextBox.TabIndex = 15;
             // 
             // segma2TextBox
             // 
-            this.segma2TextBox.Location = new System.Drawing.Point(81, 35);
+            this.segma2TextBox.Location = new System.Drawing.Point(80, 35);
             this.segma2TextBox.Name = "segma2TextBox";
             this.segma2TextBox.Size = new System.Drawing.Size(80, 20);
             this.segma2TextBox.TabIndex = 13;
             // 
             // segma3TextBox
             // 
-            this.segma3TextBox.Location = new System.Drawing.Point(81, 67);
+            this.segma3TextBox.Location = new System.Drawing.Point(80, 67);
             this.segma3TextBox.Name = "segma3TextBox";
             this.segma3TextBox.Size = new System.Drawing.Size(80, 20);
             this.segma3TextBox.TabIndex = 14;
@@ -772,9 +765,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label8.BackColor = System.Drawing.Color.Red;
-            this.label8.Location = new System.Drawing.Point(253, 0);
+            this.label8.Location = new System.Drawing.Point(252, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(74, 32);
+            this.label8.Size = new System.Drawing.Size(75, 32);
             this.label8.TabIndex = 20;
             // 
             // Mu4ComboBox
@@ -835,7 +828,7 @@
             "255"});
             this.Mu4ComboBox.Location = new System.Drawing.Point(3, 100);
             this.Mu4ComboBox.Name = "Mu4ComboBox";
-            this.Mu4ComboBox.Size = new System.Drawing.Size(72, 21);
+            this.Mu4ComboBox.Size = new System.Drawing.Size(71, 21);
             this.Mu4ComboBox.TabIndex = 66;
             // 
             // Mu1ComboBox
@@ -896,8 +889,15 @@
             "255"});
             this.Mu1ComboBox.Location = new System.Drawing.Point(3, 3);
             this.Mu1ComboBox.Name = "Mu1ComboBox";
-            this.Mu1ComboBox.Size = new System.Drawing.Size(72, 21);
+            this.Mu1ComboBox.Size = new System.Drawing.Size(71, 21);
             this.Mu1ComboBox.TabIndex = 63;
+            // 
+            // prior4TextBox
+            // 
+            this.prior4TextBox.Location = new System.Drawing.Point(178, 100);
+            this.prior4TextBox.Name = "prior4TextBox";
+            this.prior4TextBox.Size = new System.Drawing.Size(67, 20);
+            this.prior4TextBox.TabIndex = 19;
             // 
             // numericUpDown1
             // 
