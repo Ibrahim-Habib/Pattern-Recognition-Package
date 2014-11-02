@@ -8,3 +8,6 @@ D:\FCIS\4th year\First Term\Pattern Recognition\Tasks\Pattern Recognition Task 2
 D:\FCIS\4th year\First Term\Pattern Recognition\Tasks\Pattern Recognition Task 2\Pattern Recognition Task 2\obj\Debug\Pattern Recognition Task 2.csproj.GenerateResource.Cache
 D:\FCIS\4th year\First Term\Pattern Recognition\Tasks\Pattern Recognition Task 2\Pattern Recognition Task 2\obj\Debug\Pattern Recognition Task 2.exe
 D:\FCIS\4th year\First Term\Pattern Recognition\Tasks\Pattern Recognition Task 2\Pattern Recognition Task 2\obj\Debug\Pattern Recognition Task 2.pdb
+D:\Osama\Programming\Projects\Pattern-Recognition-Package\Pattern Recognition Task 2\bin\Debug\Pattern Recognition Task 2.exe.config
+D:\Osama\Programming\Projects\Pattern-Recognition-Package\Pattern Recognition Task 2\obj\Debug\Pattern Recognition Task 2.exe
+D:\Osama\Programming\Projects\Pattern-Recognition-Package\Pattern Recognition Task 2\obj\Debug\Pattern Recognition Task 2.pdb
