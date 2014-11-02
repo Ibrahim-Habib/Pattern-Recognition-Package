@@ -1,0 +1,10 @@
+C:\Users\TEC\Documents\Visual Studio 2012\Projects\Pattern Recognition Task 2\Pattern Recognition Task 2\bin\Debug\Pattern Recognition Task 2.exe.config
+D:\FCIS\4th year\First Term\Pattern Recognition\Tasks\Pattern Recognition Task 2\Pattern Recognition Task 2\bin\Debug\Pattern Recognition Task 2.exe.config
+D:\FCIS\4th year\First Term\Pattern Recognition\Tasks\Pattern Recognition Task 2\Pattern Recognition Task 2\bin\Debug\Pattern Recognition Task 2.exe
+D:\FCIS\4th year\First Term\Pattern Recognition\Tasks\Pattern Recognition Task 2\Pattern Recognition Task 2\bin\Debug\Pattern Recognition Task 2.pdb
+D:\FCIS\4th year\First Term\Pattern Recognition\Tasks\Pattern Recognition Task 2\Pattern Recognition Task 2\obj\Debug\Pattern Recognition Task 2.csprojResolveAssemblyReference.cache
+D:\FCIS\4th year\First Term\Pattern Recognition\Tasks\Pattern Recognition Task 2\Pattern Recognition Task 2\obj\Debug\Pattern_Recognition_Task_2.GUI.resources
+D:\FCIS\4th year\First Term\Pattern Recognition\Tasks\Pattern Recognition Task 2\Pattern Recognition Task 2\obj\Debug\Pattern_Recognition_Task_2.Properties.Resources.resources
+D:\FCIS\4th year\First Term\Pattern Recognition\Tasks\Pattern Recognition Task 2\Pattern Recognition Task 2\obj\Debug\Pattern Recognition Task 2.csproj.GenerateResource.Cache
+D:\FCIS\4th year\First Term\Pattern Recognition\Tasks\Pattern Recognition Task 2\Pattern Recognition Task 2\obj\Debug\Pattern Recognition Task 2.exe
+D:\FCIS\4th year\First Term\Pattern Recognition\Tasks\Pattern Recognition Task 2\Pattern Recognition Task 2\obj\Debug\Pattern Recognition Task 2.pdb
