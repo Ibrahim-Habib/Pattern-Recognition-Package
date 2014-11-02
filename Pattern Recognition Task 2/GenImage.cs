@@ -38,6 +38,11 @@ namespace Pattern_Recognition_Task_2
             return Img;
         }
 
+        static private double boxMuller(double R1, double R2)
+        {
+            return  Math.Sqrt(-2 * Math.Log(R1, Math.E)) * 0.5 * Math.Cos(2 * Math.PI * R2);
+        }
+
         static private void FillSlices(Slice slice)
         {
             Random GRand = new Random();
@@ -51,7 +56,7 @@ namespace Pattern_Recognition_Task_2
                 {
                     R1 = RRand.NextDouble();
                     R2 = RRand.NextDouble();
-                    Z = Math.Sqrt(-2 * Math.Log(R1, Math.E)) * 0.5 * Math.Cos(2 * Math.PI * R2);
+                    Z = boxMuller(R1, R2);
 
                     R = (int)(Z * slice.R_sigma + slice.R_mu);
                     if (R > 255)
@@ -61,7 +66,7 @@ namespace Pattern_Recognition_Task_2
 
                     R1 = GRand.NextDouble();
                     R2 = GRand.NextDouble();
-                    Z = Math.Sqrt(-2 * Math.Log(R1, Math.E)) * 0.5 * Math.Cos(2 * Math.PI * R2);
+                    Z = boxMuller(R1, R2);
 
                     G = (int)(Z * slice.G_sigma + slice.G_mu);
                     if (G > 255)
@@ -71,7 +76,7 @@ namespace Pattern_Recognition_Task_2
 
                     R1 = BRand.NextDouble();
                     R2 = BRand.NextDouble();
-                    Z = Math.Sqrt(-2 * Math.Log(R1, Math.E)) * 0.5 * Math.Cos(2 * Math.PI * R2);
+                    Z = boxMuller(R1, R2);
 
                     B = (int)(Z * slice.B_sigma + slice.B_mu);
 
