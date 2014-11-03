@@ -335,6 +335,13 @@ namespace Pattern_Recognition_Task_2
 
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog SF = new SaveFileDialog();
+            SF.ShowDialog();
+            AfterSegmentationPictureBox.Image.Save(SF.FileName);
+        }
+
 
     }
 }

@@ -68,7 +68,7 @@ namespace Pattern_Recognition_Task_2
 
         private double normalFunction(double Segma, double mu, double x)
         {
-            return (1.0 / (Math.Sqrt(44.0 / 7.0) * Segma)) * Math.Exp(-((x - mu) * (x - mu)) / (2 * Segma * Segma)); 
+            return (1.0 / (Math.Sqrt(2.0 * Math.PI) * Segma)) * Math.Exp(-((x - mu) * (x - mu)) / (2.0 * Segma * Segma)); 
         }
 
         private int getPixelClass(Color pixelColor)

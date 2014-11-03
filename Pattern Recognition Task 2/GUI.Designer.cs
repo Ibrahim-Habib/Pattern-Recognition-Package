@@ -73,7 +73,6 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.prior4TextBox = new System.Windows.Forms.TextBox();
             this.prior3TextBox = new System.Windows.Forms.TextBox();
             this.prior2TextBox = new System.Windows.Forms.TextBox();
             this.prior1TextBox = new System.Windows.Forms.TextBox();
@@ -84,12 +83,14 @@
             this.label8 = new System.Windows.Forms.Label();
             this.Mu4ComboBox = new System.Windows.Forms.ComboBox();
             this.Mu1ComboBox = new System.Windows.Forms.ComboBox();
+            this.prior4TextBox = new System.Windows.Forms.TextBox();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.Class4 = new System.Windows.Forms.Label();
             this.Class3 = new System.Windows.Forms.Label();
             this.Class2 = new System.Windows.Forms.Label();
             this.Class1 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.tabControl2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -224,7 +225,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(148, 336);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(44, 13);
+            this.label5.Size = new System.Drawing.Size(46, 13);
             this.label5.TabIndex = 37;
             this.label5.Text = "B Sigma";
             // 
@@ -233,7 +234,7 @@
             this.label12.AutoSize = true;
             this.label12.Location = new System.Drawing.Point(23, 336);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(30, 13);
+            this.label12.Size = new System.Drawing.Size(32, 13);
             this.label12.TabIndex = 38;
             this.label12.Text = "B Mu";
             // 
@@ -242,7 +243,7 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(148, 253);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(45, 13);
+            this.label6.Size = new System.Drawing.Size(47, 13);
             this.label6.TabIndex = 35;
             this.label6.Text = "G Sigma";
             // 
@@ -251,7 +252,7 @@
             this.label13.AutoSize = true;
             this.label13.Location = new System.Drawing.Point(23, 253);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(31, 13);
+            this.label13.Size = new System.Drawing.Size(33, 13);
             this.label13.TabIndex = 36;
             this.label13.Text = "G Mu";
             // 
@@ -260,7 +261,7 @@
             this.label14.AutoSize = true;
             this.label14.Location = new System.Drawing.Point(148, 165);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(45, 13);
+            this.label14.Size = new System.Drawing.Size(47, 13);
             this.label14.TabIndex = 33;
             this.label14.Text = "R Sigma";
             // 
@@ -269,7 +270,7 @@
             this.label15.AutoSize = true;
             this.label15.Location = new System.Drawing.Point(23, 167);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(31, 13);
+            this.label15.Size = new System.Drawing.Size(33, 13);
             this.label15.TabIndex = 34;
             this.label15.Text = "R Mu";
             // 
@@ -381,6 +382,7 @@
             // 
             // tabPage5
             // 
+            this.tabPage5.Controls.Add(this.button1);
             this.tabPage5.Controls.Add(this.tabControl1);
             this.tabPage5.Controls.Add(this.label7);
             this.tabPage5.Controls.Add(this.ImagePath);
@@ -462,7 +464,7 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(334, 191);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(60, 13);
+            this.label7.Size = new System.Drawing.Size(59, 13);
             this.label7.TabIndex = 61;
             this.label7.Text = "Class Color";
             // 
@@ -500,7 +502,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(274, 191);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(29, 13);
+            this.label4.Size = new System.Drawing.Size(28, 13);
             this.label4.TabIndex = 57;
             this.label4.Text = "Prior";
             // 
@@ -509,7 +511,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(163, 191);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(88, 13);
+            this.label3.Size = new System.Drawing.Size(91, 13);
             this.label3.TabIndex = 56;
             this.label3.Text = "Likelihood Segma";
             // 
@@ -518,7 +520,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(77, 191);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(70, 13);
+            this.label2.Size = new System.Drawing.Size(73, 13);
             this.label2.TabIndex = 55;
             this.label2.Text = "Likelihood Mu";
             // 
@@ -528,7 +530,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 44.13408F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 55.86592F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 74F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 79F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
             this.tableLayoutPanel1.Controls.Add(this.Mu3ComboBox, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.Mu2ComboBox, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.label11, 3, 3);
@@ -613,7 +615,7 @@
             "255"});
             this.Mu3ComboBox.Location = new System.Drawing.Point(3, 67);
             this.Mu3ComboBox.Name = "Mu3ComboBox";
-            this.Mu3ComboBox.Size = new System.Drawing.Size(72, 21);
+            this.Mu3ComboBox.Size = new System.Drawing.Size(71, 21);
             this.Mu3ComboBox.TabIndex = 65;
             // 
             // Mu2ComboBox
@@ -674,7 +676,7 @@
             "255"});
             this.Mu2ComboBox.Location = new System.Drawing.Point(3, 35);
             this.Mu2ComboBox.Name = "Mu2ComboBox";
-            this.Mu2ComboBox.Size = new System.Drawing.Size(72, 21);
+            this.Mu2ComboBox.Size = new System.Drawing.Size(71, 21);
             this.Mu2ComboBox.TabIndex = 64;
             // 
             // label11
@@ -683,9 +685,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label11.BackColor = System.Drawing.Color.Yellow;
-            this.label11.Location = new System.Drawing.Point(253, 97);
+            this.label11.Location = new System.Drawing.Point(252, 97);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(74, 32);
+            this.label11.Size = new System.Drawing.Size(75, 32);
             this.label11.TabIndex = 23;
             // 
             // label10
@@ -694,9 +696,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label10.BackColor = System.Drawing.Color.Blue;
-            this.label10.Location = new System.Drawing.Point(253, 64);
+            this.label10.Location = new System.Drawing.Point(252, 64);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(74, 33);
+            this.label10.Size = new System.Drawing.Size(75, 33);
             this.label10.TabIndex = 22;
             // 
             // label9
@@ -705,63 +707,56 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label9.BackColor = System.Drawing.Color.Lime;
-            this.label9.Location = new System.Drawing.Point(253, 32);
+            this.label9.Location = new System.Drawing.Point(252, 32);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(74, 32);
+            this.label9.Size = new System.Drawing.Size(75, 32);
             this.label9.TabIndex = 21;
-            // 
-            // prior4TextBox
-            // 
-            this.prior4TextBox.Location = new System.Drawing.Point(179, 100);
-            this.prior4TextBox.Name = "prior4TextBox";
-            this.prior4TextBox.Size = new System.Drawing.Size(67, 20);
-            this.prior4TextBox.TabIndex = 19;
             // 
             // prior3TextBox
             // 
-            this.prior3TextBox.Location = new System.Drawing.Point(179, 67);
+            this.prior3TextBox.Location = new System.Drawing.Point(178, 67);
             this.prior3TextBox.Name = "prior3TextBox";
             this.prior3TextBox.Size = new System.Drawing.Size(67, 20);
             this.prior3TextBox.TabIndex = 18;
             // 
             // prior2TextBox
             // 
-            this.prior2TextBox.Location = new System.Drawing.Point(179, 35);
+            this.prior2TextBox.Location = new System.Drawing.Point(178, 35);
             this.prior2TextBox.Name = "prior2TextBox";
             this.prior2TextBox.Size = new System.Drawing.Size(67, 20);
             this.prior2TextBox.TabIndex = 17;
             // 
             // prior1TextBox
             // 
-            this.prior1TextBox.Location = new System.Drawing.Point(179, 3);
+            this.prior1TextBox.Location = new System.Drawing.Point(178, 3);
             this.prior1TextBox.Name = "prior1TextBox";
             this.prior1TextBox.Size = new System.Drawing.Size(67, 20);
             this.prior1TextBox.TabIndex = 16;
             // 
             // segma1TextBox
             // 
-            this.segma1TextBox.Location = new System.Drawing.Point(81, 3);
+            this.segma1TextBox.Location = new System.Drawing.Point(80, 3);
             this.segma1TextBox.Name = "segma1TextBox";
             this.segma1TextBox.Size = new System.Drawing.Size(80, 20);
             this.segma1TextBox.TabIndex = 12;
             // 
             // segma4TextBox
             // 
-            this.segma4TextBox.Location = new System.Drawing.Point(81, 100);
+            this.segma4TextBox.Location = new System.Drawing.Point(80, 100);
             this.segma4TextBox.Name = "segma4TextBox";
             this.segma4TextBox.Size = new System.Drawing.Size(80, 20);
             this.segma4TextBox.TabIndex = 15;
             // 
             // segma2TextBox
             // 
-            this.segma2TextBox.Location = new System.Drawing.Point(81, 35);
+            this.segma2TextBox.Location = new System.Drawing.Point(80, 35);
             this.segma2TextBox.Name = "segma2TextBox";
             this.segma2TextBox.Size = new System.Drawing.Size(80, 20);
             this.segma2TextBox.TabIndex = 13;
             // 
             // segma3TextBox
             // 
-            this.segma3TextBox.Location = new System.Drawing.Point(81, 67);
+            this.segma3TextBox.Location = new System.Drawing.Point(80, 67);
             this.segma3TextBox.Name = "segma3TextBox";
             this.segma3TextBox.Size = new System.Drawing.Size(80, 20);
             this.segma3TextBox.TabIndex = 14;
@@ -772,9 +767,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label8.BackColor = System.Drawing.Color.Red;
-            this.label8.Location = new System.Drawing.Point(253, 0);
+            this.label8.Location = new System.Drawing.Point(252, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(74, 32);
+            this.label8.Size = new System.Drawing.Size(75, 32);
             this.label8.TabIndex = 20;
             // 
             // Mu4ComboBox
@@ -835,7 +830,7 @@
             "255"});
             this.Mu4ComboBox.Location = new System.Drawing.Point(3, 100);
             this.Mu4ComboBox.Name = "Mu4ComboBox";
-            this.Mu4ComboBox.Size = new System.Drawing.Size(72, 21);
+            this.Mu4ComboBox.Size = new System.Drawing.Size(71, 21);
             this.Mu4ComboBox.TabIndex = 66;
             // 
             // Mu1ComboBox
@@ -896,8 +891,15 @@
             "255"});
             this.Mu1ComboBox.Location = new System.Drawing.Point(3, 3);
             this.Mu1ComboBox.Name = "Mu1ComboBox";
-            this.Mu1ComboBox.Size = new System.Drawing.Size(72, 21);
+            this.Mu1ComboBox.Size = new System.Drawing.Size(71, 21);
             this.Mu1ComboBox.TabIndex = 63;
+            // 
+            // prior4TextBox
+            // 
+            this.prior4TextBox.Location = new System.Drawing.Point(178, 100);
+            this.prior4TextBox.Name = "prior4TextBox";
+            this.prior4TextBox.Size = new System.Drawing.Size(67, 20);
+            this.prior4TextBox.TabIndex = 19;
             // 
             // numericUpDown1
             // 
@@ -956,6 +958,16 @@
             this.label1.Size = new System.Drawing.Size(94, 13);
             this.label1.TabIndex = 48;
             this.label1.Text = "Number of classes";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(314, 362);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(111, 49);
+            this.button1.TabIndex = 63;
+            this.button1.Text = "Save Segment Image";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // GUI
             // 
@@ -1049,6 +1061,7 @@
         private System.Windows.Forms.ComboBox Mu2ComboBox;
         private System.Windows.Forms.ComboBox Mu4ComboBox;
         private System.Windows.Forms.ComboBox Mu1ComboBox;
+        private System.Windows.Forms.Button button1;
     }
 }
 
