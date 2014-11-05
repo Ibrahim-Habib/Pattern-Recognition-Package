@@ -16,32 +16,34 @@ namespace Pattern_Recognition_Task_2
         private Bitmap source;
         GenImage.Slice[] slices;
         private int H, W;
-        
+        private int currentClass;
+
         public GUI()
         {
             InitializeComponent();
-            Mu1ComboBox.Enabled = numericUpDown1.Value >= 1;
+            currentClass = 0;
+            Mu1TextBox.Enabled = numericUpDown1.Value >= 1;
             segma1TextBox.Enabled = numericUpDown1.Value >= 1;
             prior1TextBox.Enabled = numericUpDown1.Value >= 1;
 
-            Mu2ComboBox.Enabled = numericUpDown1.Value >= 2;
+            Mu2TextBox.Enabled = numericUpDown1.Value >= 2;
             segma2TextBox.Enabled = numericUpDown1.Value >= 2;
             prior2TextBox.Enabled = numericUpDown1.Value >= 2;
 
-            Mu3ComboBox.Enabled = numericUpDown1.Value >= 3;
+            Mu3TextBox.Enabled = numericUpDown1.Value >= 3;
             segma3TextBox.Enabled = numericUpDown1.Value >= 3;
             prior3TextBox.Enabled = numericUpDown1.Value >= 3;
 
-            Mu4ComboBox.Enabled = numericUpDown1.Value >= 4;
+            Mu4TextBox.Enabled = numericUpDown1.Value >= 4;
             segma4TextBox.Enabled = numericUpDown1.Value >= 4;
             prior4TextBox.Enabled = numericUpDown1.Value >= 4;
 
             slices = new GenImage.Slice[4];     
             comboBox1.SelectedIndex = 0;
-            Mu1ComboBox.Text = "0";
-            Mu2ComboBox.Text = "0";
-            Mu3ComboBox.Text = "0";
-            Mu4ComboBox.Text = "0";
+            Mu1TextBox.Text = "0";
+            Mu2TextBox.Text = "0";
+            Mu3TextBox.Text = "0";
+            Mu4TextBox.Text = "0";
 
             segma1TextBox.Text = "0";
             segma2TextBox.Text = "0";
@@ -129,17 +131,7 @@ namespace Pattern_Recognition_Task_2
             BSigmaTextBox.Text = slices[comboBox1.SelectedIndex].B_sigma.ToString();
         }
 
-        private void RMuTextBox_TextChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                slices[comboBox1.SelectedIndex].R_mu = double.Parse(RMuTextBox.Text);
-            
-            }
-            catch(Exception)
-            {}
-            
-        }
+   
 
         private void RSigmaTextBox_TextChanged(object sender, EventArgs e)
         {
@@ -153,15 +145,6 @@ namespace Pattern_Recognition_Task_2
 
         }
 
-        private void GMuTextBox_TextChanged(object sender, EventArgs e)
-        {
-            try 
-            {
-                slices[comboBox1.SelectedIndex].G_mu = double.Parse(GMuTextBox.Text);
-            }
-            catch (Exception)
-            { }
-        }
 
         private void GSigmaTextBox_TextChanged(object sender, EventArgs e)
         {
@@ -173,15 +156,7 @@ namespace Pattern_Recognition_Task_2
             { }
         }
 
-        private void BMuTextBox_TextChanged(object sender, EventArgs e)
-        {
-            try 
-            {
-                slices[comboBox1.SelectedIndex].B_mu = double.Parse(BMuTextBox.Text);
-            }
-            catch (Exception)
-            { }
-        }
+     
 
         private void BSigmaTextBox_TextChanged(object sender, EventArgs e)
         {
@@ -237,30 +212,43 @@ namespace Pattern_Recognition_Task_2
                 if (numericUpDown1.Value >= 1)
                 {
                     prior[0] = double.Parse(prior1TextBox.Text);
-                    Mu[0] = double.Parse(Mu1ComboBox.Text);
+                    Mu[0] = double.Parse(Mu1TextBox.Text);
                     segma[0] = double.Parse(segma1TextBox.Text);
                 }
 
                 if (numericUpDown1.Value >= 2)
                 {
                     prior[1] = double.Parse(prior2TextBox.Text);
-                    Mu[1] = double.Parse(Mu2ComboBox.Text);
+                    Mu[1] = double.Parse(Mu2TextBox.Text);
                     segma[1] = double.Parse(segma2TextBox.Text);
                 }
 
                 if (numericUpDown1.Value >= 3)
                 {
                     prior[2] = double.Parse(prior3TextBox.Text);
-                    Mu[2] = double.Parse(Mu3ComboBox.Text);
+                    Mu[2] = double.Parse(Mu3TextBox.Text);
                     segma[2] = double.Parse(segma3TextBox.Text);
                 }
 
                 if (numericUpDown1.Value >= 4)
                 {
                     prior[3] = double.Parse(prior4TextBox.Text);
-                    Mu[3] = double.Parse(Mu4ComboBox.Text);
+                    Mu[3] = double.Parse(Mu4TextBox.Text);
                     segma[3] = double.Parse(segma4TextBox.Text);
                 }
+
+                double sumPrior = 0;
+                for (int i = 0; i < numericUpDown1.Value; i++)
+                {
+                    sumPrior += prior[i];
+                }
+
+                if (sumPrior > 1)
+                    throw (new Exception());
+
+                PixelClassifier pc = new PixelClassifier((int)numericUpDown1.Value, prior, Mu, segma);
+                Bitmap bm = pc.classifyImage(greyScaleImage);
+                AfterSegmentationPictureBox.Image = bm;
             }
 
             catch (Exception)
@@ -269,9 +257,7 @@ namespace Pattern_Recognition_Task_2
                     , "Error", MessageBoxButtons.OK);
             }
             
-            PixelClassifier pc = new PixelClassifier((int)numericUpDown1.Value, prior, Mu, segma);
-            Bitmap bm = pc.classifyImage(greyScaleImage);
-            AfterSegmentationPictureBox.Image = bm;
+           
 
         }
 
@@ -303,6 +289,8 @@ namespace Pattern_Recognition_Task_2
             dialog.Filter = "All Picture Files |*.bmp;*.jpg;*.jpeg;*.jpe;*.png;|All Files (*.*)|*.*";
             dialog.Title = "Open an Image";
             dialog.CheckPathExists = true;
+           
+            
             if (dialog.ShowDialog() == DialogResult.OK)
             {
                 generatedImagePictureBox.Image.Save(dialog.FileName,System.Drawing.Imaging.ImageFormat.Jpeg);
@@ -311,19 +299,19 @@ namespace Pattern_Recognition_Task_2
 
         private void numericUpDown1_ValueChanged_1(object sender, EventArgs e)
         {
-            Mu1ComboBox.Enabled = numericUpDown1.Value >= 1;
+            Mu1TextBox.Enabled = numericUpDown1.Value >= 1;
             segma1TextBox.Enabled = numericUpDown1.Value >= 1;
             prior1TextBox.Enabled = numericUpDown1.Value >= 1;
 
-            Mu2ComboBox.Enabled = numericUpDown1.Value >= 2;
+            Mu2TextBox.Enabled = numericUpDown1.Value >= 2;
             segma2TextBox.Enabled = numericUpDown1.Value >= 2;
             prior2TextBox.Enabled = numericUpDown1.Value >= 2;
 
-            Mu3ComboBox.Enabled = numericUpDown1.Value >= 3;
+            Mu3TextBox.Enabled = numericUpDown1.Value >= 3;
             segma3TextBox.Enabled = numericUpDown1.Value >= 3;
             prior3TextBox.Enabled = numericUpDown1.Value >= 3;
 
-            Mu4ComboBox.Enabled = numericUpDown1.Value >= 4;
+            Mu4TextBox.Enabled = numericUpDown1.Value >= 4;
             segma4TextBox.Enabled = numericUpDown1.Value >= 4;
             prior4TextBox.Enabled = numericUpDown1.Value >= 4;
 
@@ -335,6 +323,107 @@ namespace Pattern_Recognition_Task_2
 
         }
 
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog dialog = new SaveFileDialog();
+            dialog.Filter = "All Picture Files |*.bmp;*.jpg;*.jpeg;*.jpe;*.png;|All Files (*.*)|*.*";
+            dialog.Title = "Save an Image";
+            dialog.CheckPathExists = true;
+
+  
+            
+            if (dialog.ShowDialog() == DialogResult.OK)
+            {
+                pictureBox1.Image.Save(dialog.FileName, System.Drawing.Imaging.ImageFormat.Jpeg);
+            }
+        }
+
+        private void greyScalePictureBox_Click(object sender, EventArgs e)
+        {
+            MouseEventArgs me = (MouseEventArgs) e;
+            Point p = me.Location;
+            p.X = (int) ((me.Location.X) * ((double)greyScaleImage.Width) / ((double)greyScalePictureBox.Width)) ;
+            p.Y = (int)((me.Location.Y) * ((double)greyScaleImage.Height) / ((double)greyScalePictureBox.Width));
+            Color c = greyScaleImage.GetPixel(p.X, p.Y);
+            double x = (c.G + c.B + c.R) / 3.0;
+            if(currentClass == 0 && Mu1TextBox.Enabled)
+            {
+                Mu1TextBox.Text = x.ToString();
+                currentClass++;
+            }
+            else if (currentClass == 1 && Mu2TextBox.Enabled)
+            {
+                Mu2TextBox.Text = x.ToString();
+                currentClass++;
+            }
+            else if (currentClass == 2 && Mu3TextBox.Enabled)
+            {
+                Mu3TextBox.Text = x.ToString();
+                currentClass++;
+            }
+            else if (currentClass == 3 && Mu4TextBox.Enabled)
+            {
+                Mu4TextBox.Text = x.ToString();
+                currentClass++; 
+            }
+        }
+
+        private void resetButton_Click(object sender, EventArgs e)
+        {
+            numericUpDown1.Value = 0;
+            Mu1TextBox.Text = Mu2TextBox.Text = Mu3TextBox.Text = Mu4TextBox.Text = "0";
+            segma1TextBox.Text = segma2TextBox.Text = segma3TextBox.Text = segma4TextBox.Text = "0";
+            prior1TextBox.Text = prior2TextBox.Text = prior3TextBox.Text = prior4TextBox.Text = "0";
+            currentClass = 0;
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            SaveFileDialog dialog = new SaveFileDialog();
+            dialog.Filter = "All Picture Files |*.bmp;*.jpg;*.jpeg;*.jpe;*.png;|All Files (*.*)|*.*";
+            dialog.Title = "Open an Image";
+            dialog.CheckPathExists = true;
+
+
+            if (dialog.ShowDialog() == DialogResult.OK)
+            {
+                AfterSegmentationPictureBox.Image.Save(dialog.FileName, System.Drawing.Imaging.ImageFormat.Jpeg);
+            }
+        }
+
+        private void RMuTextBox_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                slices[comboBox1.SelectedIndex].R_mu = double.Parse(RMuTextBox.Text);
+            }
+            catch (Exception)
+            { }
+        }
+
+        private void GMuTextBox_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                slices[comboBox1.SelectedIndex].G_mu = double.Parse(GMuTextBox.Text);
+            }
+            catch (Exception)
+            { }
+        }
+
+        private void BMuTextBox_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                slices[comboBox1.SelectedIndex].B_mu = double.Parse(BMuTextBox.Text);
+            }
+            catch (Exception)
+            { }
+
+        }
+
+    
 
     }
 }

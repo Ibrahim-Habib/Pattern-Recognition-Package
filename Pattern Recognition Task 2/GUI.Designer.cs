@@ -35,7 +35,6 @@
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.saveButton = new System.Windows.Forms.Button();
             this.generatedImagePictureBox = new System.Windows.Forms.PictureBox();
-            this.BMuTextBox = new System.Windows.Forms.TextBox();
             this.BSigmaTextBox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -45,16 +44,15 @@
             this.label15 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.GMuTextBox = new System.Windows.Forms.TextBox();
             this.RSigmaTextBox = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.GSigmaTextBox = new System.Windows.Forms.TextBox();
-            this.RMuTextBox = new System.Windows.Forms.TextBox();
             this.widthTextBox = new System.Windows.Forms.TextBox();
             this.hieghtTextBox = new System.Windows.Forms.TextBox();
             this.btn_generate = new System.Windows.Forms.Button();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.resetButton = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.greyScalePictureBox = new System.Windows.Forms.PictureBox();
@@ -68,10 +66,12 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.Mu3ComboBox = new System.Windows.Forms.ComboBox();
-            this.Mu2ComboBox = new System.Windows.Forms.ComboBox();
+            this.Mu4TextBox = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
+            this.Mu3TextBox = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
+            this.Mu2TextBox = new System.Windows.Forms.TextBox();
+            this.Mu1TextBox = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.prior3TextBox = new System.Windows.Forms.TextBox();
             this.prior2TextBox = new System.Windows.Forms.TextBox();
@@ -81,8 +81,6 @@
             this.segma2TextBox = new System.Windows.Forms.TextBox();
             this.segma3TextBox = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.Mu4ComboBox = new System.Windows.Forms.ComboBox();
-            this.Mu1ComboBox = new System.Windows.Forms.ComboBox();
             this.prior4TextBox = new System.Windows.Forms.TextBox();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.Class4 = new System.Windows.Forms.Label();
@@ -90,6 +88,10 @@
             this.Class2 = new System.Windows.Forms.Label();
             this.Class1 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.SaveSegmentedButton = new System.Windows.Forms.Button();
+            this.RMuTextBox = new System.Windows.Forms.TextBox();
+            this.GMuTextBox = new System.Windows.Forms.TextBox();
+            this.BMuTextBox = new System.Windows.Forms.TextBox();
             this.tabControl2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -150,9 +152,11 @@
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.BMuTextBox);
+            this.tabPage4.Controls.Add(this.GMuTextBox);
+            this.tabPage4.Controls.Add(this.RMuTextBox);
             this.tabPage4.Controls.Add(this.saveButton);
             this.tabPage4.Controls.Add(this.generatedImagePictureBox);
-            this.tabPage4.Controls.Add(this.BMuTextBox);
             this.tabPage4.Controls.Add(this.BSigmaTextBox);
             this.tabPage4.Controls.Add(this.label5);
             this.tabPage4.Controls.Add(this.label12);
@@ -162,12 +166,10 @@
             this.tabPage4.Controls.Add(this.label15);
             this.tabPage4.Controls.Add(this.comboBox1);
             this.tabPage4.Controls.Add(this.label16);
-            this.tabPage4.Controls.Add(this.GMuTextBox);
             this.tabPage4.Controls.Add(this.RSigmaTextBox);
             this.tabPage4.Controls.Add(this.label17);
             this.tabPage4.Controls.Add(this.label18);
             this.tabPage4.Controls.Add(this.GSigmaTextBox);
-            this.tabPage4.Controls.Add(this.RMuTextBox);
             this.tabPage4.Controls.Add(this.widthTextBox);
             this.tabPage4.Controls.Add(this.hieghtTextBox);
             this.tabPage4.Controls.Add(this.btn_generate);
@@ -200,15 +202,6 @@
             this.generatedImagePictureBox.TabIndex = 41;
             this.generatedImagePictureBox.TabStop = false;
             this.generatedImagePictureBox.Click += new System.EventHandler(this.pictureBox2_Click);
-            // 
-            // BMuTextBox
-            // 
-            this.BMuTextBox.Location = new System.Drawing.Point(16, 355);
-            this.BMuTextBox.Name = "BMuTextBox";
-            this.BMuTextBox.Size = new System.Drawing.Size(100, 20);
-            this.BMuTextBox.TabIndex = 40;
-            this.BMuTextBox.Text = "0";
-            this.BMuTextBox.TextChanged += new System.EventHandler(this.BMuTextBox_TextChanged);
             // 
             // BSigmaTextBox
             // 
@@ -298,15 +291,6 @@
             this.label16.TabIndex = 31;
             this.label16.Text = "Slice Number";
             // 
-            // GMuTextBox
-            // 
-            this.GMuTextBox.Location = new System.Drawing.Point(16, 272);
-            this.GMuTextBox.Name = "GMuTextBox";
-            this.GMuTextBox.Size = new System.Drawing.Size(100, 20);
-            this.GMuTextBox.TabIndex = 28;
-            this.GMuTextBox.Text = "0";
-            this.GMuTextBox.TextChanged += new System.EventHandler(this.GMuTextBox_TextChanged);
-            // 
             // RSigmaTextBox
             // 
             this.RSigmaTextBox.Location = new System.Drawing.Point(141, 186);
@@ -345,15 +329,6 @@
             this.GSigmaTextBox.Text = "0";
             this.GSigmaTextBox.TextChanged += new System.EventHandler(this.GSigmaTextBox_TextChanged);
             // 
-            // RMuTextBox
-            // 
-            this.RMuTextBox.Location = new System.Drawing.Point(16, 186);
-            this.RMuTextBox.Name = "RMuTextBox";
-            this.RMuTextBox.Size = new System.Drawing.Size(100, 20);
-            this.RMuTextBox.TabIndex = 27;
-            this.RMuTextBox.Text = "0";
-            this.RMuTextBox.TextChanged += new System.EventHandler(this.RMuTextBox_TextChanged);
-            // 
             // widthTextBox
             // 
             this.widthTextBox.Location = new System.Drawing.Point(141, 42);
@@ -381,6 +356,8 @@
             // 
             // tabPage5
             // 
+            this.tabPage5.Controls.Add(this.SaveSegmentedButton);
+            this.tabPage5.Controls.Add(this.resetButton);
             this.tabPage5.Controls.Add(this.tabControl1);
             this.tabPage5.Controls.Add(this.label7);
             this.tabPage5.Controls.Add(this.ImagePath);
@@ -402,6 +379,16 @@
             this.tabPage5.TabIndex = 2;
             this.tabPage5.Text = "Classify Greyscale Image";
             this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // resetButton
+            // 
+            this.resetButton.Location = new System.Drawing.Point(58, 373);
+            this.resetButton.Name = "resetButton";
+            this.resetButton.Size = new System.Drawing.Size(75, 23);
+            this.resetButton.TabIndex = 63;
+            this.resetButton.Text = "Reset";
+            this.resetButton.UseVisualStyleBackColor = true;
+            this.resetButton.Click += new System.EventHandler(this.resetButton_Click);
             // 
             // tabControl1
             // 
@@ -431,9 +418,10 @@
             this.greyScalePictureBox.Location = new System.Drawing.Point(0, 0);
             this.greyScalePictureBox.Name = "greyScalePictureBox";
             this.greyScalePictureBox.Size = new System.Drawing.Size(449, 422);
-            this.greyScalePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.greyScalePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.greyScalePictureBox.TabIndex = 26;
             this.greyScalePictureBox.TabStop = false;
+            this.greyScalePictureBox.Click += new System.EventHandler(this.greyScalePictureBox_Click);
             // 
             // tabPage2
             // 
@@ -452,7 +440,7 @@
             this.AfterSegmentationPictureBox.Location = new System.Drawing.Point(0, 0);
             this.AfterSegmentationPictureBox.Name = "AfterSegmentationPictureBox";
             this.AfterSegmentationPictureBox.Size = new System.Drawing.Size(449, 422);
-            this.AfterSegmentationPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.AfterSegmentationPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.AfterSegmentationPictureBox.TabIndex = 28;
             this.AfterSegmentationPictureBox.TabStop = false;
             this.AfterSegmentationPictureBox.Click += new System.EventHandler(this.AfterSegmentationPictureBox_Click_1);
@@ -528,11 +516,13 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 44.13408F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 55.86592F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 74F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
-            this.tableLayoutPanel1.Controls.Add(this.Mu3ComboBox, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.Mu2ComboBox, 0, 1);
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 87F));
+            this.tableLayoutPanel1.Controls.Add(this.Mu4TextBox, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.label11, 3, 3);
+            this.tableLayoutPanel1.Controls.Add(this.Mu3TextBox, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.label10, 3, 2);
+            this.tableLayoutPanel1.Controls.Add(this.Mu2TextBox, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.Mu1TextBox, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label9, 3, 1);
             this.tableLayoutPanel1.Controls.Add(this.prior3TextBox, 2, 2);
             this.tableLayoutPanel1.Controls.Add(this.prior2TextBox, 2, 1);
@@ -542,8 +532,6 @@
             this.tableLayoutPanel1.Controls.Add(this.segma2TextBox, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.segma3TextBox, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.label8, 3, 0);
-            this.tableLayoutPanel1.Controls.Add(this.Mu4ComboBox, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.Mu1ComboBox, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.prior4TextBox, 2, 3);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(77, 207);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -555,127 +543,12 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(330, 129);
             this.tableLayoutPanel1.TabIndex = 54;
             // 
-            // Mu3ComboBox
+            // Mu4TextBox
             // 
-            this.Mu3ComboBox.FormattingEnabled = true;
-            this.Mu3ComboBox.Items.AddRange(new object[] {
-            "0",
-            "5",
-            "10",
-            "15",
-            "20",
-            "25",
-            "30",
-            "35",
-            "40",
-            "45",
-            "50",
-            "55",
-            "60",
-            "65",
-            "70",
-            "75",
-            "80",
-            "85",
-            "90",
-            "95",
-            "100",
-            "105",
-            "110",
-            "115",
-            "120",
-            "125",
-            "130",
-            "135",
-            "140",
-            "145",
-            "150",
-            "155",
-            "160",
-            "165",
-            "170",
-            "175",
-            "180",
-            "185",
-            "190",
-            "195",
-            "200",
-            "205",
-            "210",
-            "215",
-            "220",
-            "225",
-            "230",
-            "235",
-            "240",
-            "245",
-            "250",
-            "255"});
-            this.Mu3ComboBox.Location = new System.Drawing.Point(3, 67);
-            this.Mu3ComboBox.Name = "Mu3ComboBox";
-            this.Mu3ComboBox.Size = new System.Drawing.Size(71, 21);
-            this.Mu3ComboBox.TabIndex = 65;
-            // 
-            // Mu2ComboBox
-            // 
-            this.Mu2ComboBox.FormattingEnabled = true;
-            this.Mu2ComboBox.Items.AddRange(new object[] {
-            "0",
-            "5",
-            "10",
-            "15",
-            "20",
-            "25",
-            "30",
-            "35",
-            "40",
-            "45",
-            "50",
-            "55",
-            "60",
-            "65",
-            "70",
-            "75",
-            "80",
-            "85",
-            "90",
-            "95",
-            "100",
-            "105",
-            "110",
-            "115",
-            "120",
-            "125",
-            "130",
-            "135",
-            "140",
-            "145",
-            "150",
-            "155",
-            "160",
-            "165",
-            "170",
-            "175",
-            "180",
-            "185",
-            "190",
-            "195",
-            "200",
-            "205",
-            "210",
-            "215",
-            "220",
-            "225",
-            "230",
-            "235",
-            "240",
-            "245",
-            "250",
-            "255"});
-            this.Mu2ComboBox.Location = new System.Drawing.Point(3, 35);
-            this.Mu2ComboBox.Name = "Mu2ComboBox";
-            this.Mu2ComboBox.Size = new System.Drawing.Size(71, 21);
-            this.Mu2ComboBox.TabIndex = 64;
+            this.Mu4TextBox.Location = new System.Drawing.Point(3, 100);
+            this.Mu4TextBox.Name = "Mu4TextBox";
+            this.Mu4TextBox.Size = new System.Drawing.Size(68, 20);
+            this.Mu4TextBox.TabIndex = 66;
             // 
             // label11
             // 
@@ -683,10 +556,17 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label11.BackColor = System.Drawing.Color.Yellow;
-            this.label11.Location = new System.Drawing.Point(252, 97);
+            this.label11.Location = new System.Drawing.Point(245, 97);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(75, 32);
+            this.label11.Size = new System.Drawing.Size(82, 32);
             this.label11.TabIndex = 23;
+            // 
+            // Mu3TextBox
+            // 
+            this.Mu3TextBox.Location = new System.Drawing.Point(3, 67);
+            this.Mu3TextBox.Name = "Mu3TextBox";
+            this.Mu3TextBox.Size = new System.Drawing.Size(68, 20);
+            this.Mu3TextBox.TabIndex = 65;
             // 
             // label10
             // 
@@ -694,10 +574,24 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label10.BackColor = System.Drawing.Color.Blue;
-            this.label10.Location = new System.Drawing.Point(252, 64);
+            this.label10.Location = new System.Drawing.Point(245, 64);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(75, 33);
+            this.label10.Size = new System.Drawing.Size(82, 33);
             this.label10.TabIndex = 22;
+            // 
+            // Mu2TextBox
+            // 
+            this.Mu2TextBox.Location = new System.Drawing.Point(3, 35);
+            this.Mu2TextBox.Name = "Mu2TextBox";
+            this.Mu2TextBox.Size = new System.Drawing.Size(68, 20);
+            this.Mu2TextBox.TabIndex = 64;
+            // 
+            // Mu1TextBox
+            // 
+            this.Mu1TextBox.Location = new System.Drawing.Point(3, 3);
+            this.Mu1TextBox.Name = "Mu1TextBox";
+            this.Mu1TextBox.Size = new System.Drawing.Size(68, 20);
+            this.Mu1TextBox.TabIndex = 63;
             // 
             // label9
             // 
@@ -705,56 +599,56 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label9.BackColor = System.Drawing.Color.Lime;
-            this.label9.Location = new System.Drawing.Point(252, 32);
+            this.label9.Location = new System.Drawing.Point(245, 32);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(75, 32);
+            this.label9.Size = new System.Drawing.Size(82, 32);
             this.label9.TabIndex = 21;
             // 
             // prior3TextBox
             // 
-            this.prior3TextBox.Location = new System.Drawing.Point(178, 67);
+            this.prior3TextBox.Location = new System.Drawing.Point(171, 67);
             this.prior3TextBox.Name = "prior3TextBox";
             this.prior3TextBox.Size = new System.Drawing.Size(67, 20);
             this.prior3TextBox.TabIndex = 18;
             // 
             // prior2TextBox
             // 
-            this.prior2TextBox.Location = new System.Drawing.Point(178, 35);
+            this.prior2TextBox.Location = new System.Drawing.Point(171, 35);
             this.prior2TextBox.Name = "prior2TextBox";
             this.prior2TextBox.Size = new System.Drawing.Size(67, 20);
             this.prior2TextBox.TabIndex = 17;
             // 
             // prior1TextBox
             // 
-            this.prior1TextBox.Location = new System.Drawing.Point(178, 3);
+            this.prior1TextBox.Location = new System.Drawing.Point(171, 3);
             this.prior1TextBox.Name = "prior1TextBox";
             this.prior1TextBox.Size = new System.Drawing.Size(67, 20);
             this.prior1TextBox.TabIndex = 16;
             // 
             // segma1TextBox
             // 
-            this.segma1TextBox.Location = new System.Drawing.Point(80, 3);
+            this.segma1TextBox.Location = new System.Drawing.Point(77, 3);
             this.segma1TextBox.Name = "segma1TextBox";
             this.segma1TextBox.Size = new System.Drawing.Size(80, 20);
             this.segma1TextBox.TabIndex = 12;
             // 
             // segma4TextBox
             // 
-            this.segma4TextBox.Location = new System.Drawing.Point(80, 100);
+            this.segma4TextBox.Location = new System.Drawing.Point(77, 100);
             this.segma4TextBox.Name = "segma4TextBox";
             this.segma4TextBox.Size = new System.Drawing.Size(80, 20);
             this.segma4TextBox.TabIndex = 15;
             // 
             // segma2TextBox
             // 
-            this.segma2TextBox.Location = new System.Drawing.Point(80, 35);
+            this.segma2TextBox.Location = new System.Drawing.Point(77, 35);
             this.segma2TextBox.Name = "segma2TextBox";
             this.segma2TextBox.Size = new System.Drawing.Size(80, 20);
             this.segma2TextBox.TabIndex = 13;
             // 
             // segma3TextBox
             // 
-            this.segma3TextBox.Location = new System.Drawing.Point(80, 67);
+            this.segma3TextBox.Location = new System.Drawing.Point(77, 67);
             this.segma3TextBox.Name = "segma3TextBox";
             this.segma3TextBox.Size = new System.Drawing.Size(80, 20);
             this.segma3TextBox.TabIndex = 14;
@@ -765,136 +659,14 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label8.BackColor = System.Drawing.Color.Red;
-            this.label8.Location = new System.Drawing.Point(252, 0);
+            this.label8.Location = new System.Drawing.Point(245, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(75, 32);
+            this.label8.Size = new System.Drawing.Size(82, 32);
             this.label8.TabIndex = 20;
-            // 
-            // Mu4ComboBox
-            // 
-            this.Mu4ComboBox.FormattingEnabled = true;
-            this.Mu4ComboBox.Items.AddRange(new object[] {
-            "0",
-            "5",
-            "10",
-            "15",
-            "20",
-            "25",
-            "30",
-            "35",
-            "40",
-            "45",
-            "50",
-            "55",
-            "60",
-            "65",
-            "70",
-            "75",
-            "80",
-            "85",
-            "90",
-            "95",
-            "100",
-            "105",
-            "110",
-            "115",
-            "120",
-            "125",
-            "130",
-            "135",
-            "140",
-            "145",
-            "150",
-            "155",
-            "160",
-            "165",
-            "170",
-            "175",
-            "180",
-            "185",
-            "190",
-            "195",
-            "200",
-            "205",
-            "210",
-            "215",
-            "220",
-            "225",
-            "230",
-            "235",
-            "240",
-            "245",
-            "250",
-            "255"});
-            this.Mu4ComboBox.Location = new System.Drawing.Point(3, 100);
-            this.Mu4ComboBox.Name = "Mu4ComboBox";
-            this.Mu4ComboBox.Size = new System.Drawing.Size(71, 21);
-            this.Mu4ComboBox.TabIndex = 66;
-            // 
-            // Mu1ComboBox
-            // 
-            this.Mu1ComboBox.FormattingEnabled = true;
-            this.Mu1ComboBox.Items.AddRange(new object[] {
-            "0",
-            "5",
-            "10",
-            "15",
-            "20",
-            "25",
-            "30",
-            "35",
-            "40",
-            "45",
-            "50",
-            "55",
-            "60",
-            "65",
-            "70",
-            "75",
-            "80",
-            "85",
-            "90",
-            "95",
-            "100",
-            "105",
-            "110",
-            "115",
-            "120",
-            "125",
-            "130",
-            "135",
-            "140",
-            "145",
-            "150",
-            "155",
-            "160",
-            "165",
-            "170",
-            "175",
-            "180",
-            "185",
-            "190",
-            "195",
-            "200",
-            "205",
-            "210",
-            "215",
-            "220",
-            "225",
-            "230",
-            "235",
-            "240",
-            "245",
-            "250",
-            "255"});
-            this.Mu1ComboBox.Location = new System.Drawing.Point(3, 3);
-            this.Mu1ComboBox.Name = "Mu1ComboBox";
-            this.Mu1ComboBox.Size = new System.Drawing.Size(71, 21);
-            this.Mu1ComboBox.TabIndex = 63;
             // 
             // prior4TextBox
             // 
-            this.prior4TextBox.Location = new System.Drawing.Point(178, 100);
+            this.prior4TextBox.Location = new System.Drawing.Point(171, 100);
             this.prior4TextBox.Name = "prior4TextBox";
             this.prior4TextBox.Size = new System.Drawing.Size(67, 20);
             this.prior4TextBox.TabIndex = 19;
@@ -956,6 +728,40 @@
             this.label1.Size = new System.Drawing.Size(94, 13);
             this.label1.TabIndex = 48;
             this.label1.Text = "Number of classes";
+            // 
+            // SaveSegmentedButton
+            // 
+            this.SaveSegmentedButton.Location = new System.Drawing.Point(355, 359);
+            this.SaveSegmentedButton.Name = "SaveSegmentedButton";
+            this.SaveSegmentedButton.Size = new System.Drawing.Size(75, 50);
+            this.SaveSegmentedButton.TabIndex = 64;
+            this.SaveSegmentedButton.Text = "Save Segmented Image";
+            this.SaveSegmentedButton.UseVisualStyleBackColor = true;
+            this.SaveSegmentedButton.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // RMuTextBox
+            // 
+            this.RMuTextBox.Location = new System.Drawing.Point(16, 186);
+            this.RMuTextBox.Name = "RMuTextBox";
+            this.RMuTextBox.Size = new System.Drawing.Size(100, 20);
+            this.RMuTextBox.TabIndex = 68;
+            this.RMuTextBox.TextChanged += new System.EventHandler(this.RMuTextBox_TextChanged);
+            // 
+            // GMuTextBox
+            // 
+            this.GMuTextBox.Location = new System.Drawing.Point(16, 272);
+            this.GMuTextBox.Name = "GMuTextBox";
+            this.GMuTextBox.Size = new System.Drawing.Size(100, 20);
+            this.GMuTextBox.TabIndex = 69;
+            this.GMuTextBox.TextChanged += new System.EventHandler(this.GMuTextBox_TextChanged);
+            // 
+            // BMuTextBox
+            // 
+            this.BMuTextBox.Location = new System.Drawing.Point(16, 355);
+            this.BMuTextBox.Name = "BMuTextBox";
+            this.BMuTextBox.Size = new System.Drawing.Size(100, 20);
+            this.BMuTextBox.TabIndex = 70;
+            this.BMuTextBox.TextChanged += new System.EventHandler(this.BMuTextBox_TextChanged);
             // 
             // GUI
             // 
@@ -1024,7 +830,6 @@
         private System.Windows.Forms.Label Class2;
         private System.Windows.Forms.Label Class1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox BMuTextBox;
         private System.Windows.Forms.TextBox BSigmaTextBox;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label12;
@@ -1034,21 +839,24 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox GMuTextBox;
         private System.Windows.Forms.TextBox RSigmaTextBox;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.TextBox GSigmaTextBox;
-        private System.Windows.Forms.TextBox RMuTextBox;
         private System.Windows.Forms.TextBox widthTextBox;
         private System.Windows.Forms.TextBox hieghtTextBox;
         private System.Windows.Forms.Button btn_generate;
         private System.Windows.Forms.PictureBox generatedImagePictureBox;
         private System.Windows.Forms.Button saveButton;
-        private System.Windows.Forms.ComboBox Mu3ComboBox;
-        private System.Windows.Forms.ComboBox Mu2ComboBox;
-        private System.Windows.Forms.ComboBox Mu4ComboBox;
-        private System.Windows.Forms.ComboBox Mu1ComboBox;
+        private System.Windows.Forms.TextBox Mu4TextBox;
+        private System.Windows.Forms.TextBox Mu3TextBox;
+        private System.Windows.Forms.TextBox Mu1TextBox;
+        private System.Windows.Forms.TextBox Mu2TextBox;
+        private System.Windows.Forms.Button resetButton;
+        private System.Windows.Forms.Button SaveSegmentedButton;
+        private System.Windows.Forms.TextBox BMuTextBox;
+        private System.Windows.Forms.TextBox GMuTextBox;
+        private System.Windows.Forms.TextBox RMuTextBox;
     }
 }
 
