@@ -1,0 +1,3 @@
+D:\FCIS\4th year\First Term\Pattern Recognition\Tasks\Pattern Recognition Package\Pattern Recognition Task 2\bin\Debug\Pattern Recognition Task 2.exe.config
+D:\FCIS\4th year\First Term\Pattern Recognition\Tasks\Pattern Recognition Package\Pattern Recognition Task 2\obj\Debug\Pattern Recognition Task 2.exe
+D:\FCIS\4th year\First Term\Pattern Recognition\Tasks\Pattern Recognition Package\Pattern Recognition Task 2\obj\Debug\Pattern Recognition Task 2.pdb
