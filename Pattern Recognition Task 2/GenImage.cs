@@ -10,8 +10,11 @@ namespace Pattern_Recognition_Task_2
 {
     class GenImage
     {
-        private static Bitmap Img;
-        private static int Height;
+        private Bitmap Img;
+        private int Height;
+        private int Width;
+        private int numOfClasses;
+        public Slice[] slices;
 
         public struct Slice
         {
@@ -20,30 +23,80 @@ namespace Pattern_Recognition_Task_2
             public int start, end;
         }
 
-        static public Bitmap GenImg(Slice[] slices, int height, int width)
+        public void setWidth(int x)
         {
-            Img = new Bitmap(width, height);
-            Height = height;
-            slices[0].start = 0;
-            slices[0].end = width / 4;
-            slices[1].start = slices[0].end + 1;
-            slices[1].end = width / 2;
-            slices[2].start = slices[1].end + 1;
-            slices[2].end = (3 * width) / 4;
-            slices[3].start = slices[2].end + 1;
-            slices[3].end = width - 1;
+            Width = x;
+        }
 
-            for (int i = 0; i < 4; i++)
+        public void setHeight(int x)
+        {
+            Height = x;
+        }
+
+        public void setNumberOfClasses(int x) 
+        {
+            numOfClasses = x;
+        }
+
+        public Slice[] getSlices
+        {
+            get { return slices; }
+            set { }
+        }
+
+
+        public GenImage()
+        {
+
+            this.Width = 400;
+            this.Height = 400;
+            this.numOfClasses = 1;
+            slices = new Slice[10];
+        }
+
+        public GenImage(int width, int height, int numClasses)
+        {
+            this.Width = width;
+            this.Height = height;
+            this.numOfClasses = numClasses;
+            slices = new Slice[10];
+        }
+
+        
+
+        public Bitmap GenImg()
+        {
+            Img = new Bitmap(Width, Height);
+            for (int i = 0; i < numOfClasses; i++)
+            {
+                if (i == 0)
+                    slices[i].start = 0;
+                else
+                    slices[i].start = slices[i - 1].end + 1;
+
+                slices[i].end =(int)(((double)(i + 1) / numOfClasses) * Width) - 1;
+            }
+
+            //slices[0].start = 0;
+            //slices[0].end = width / 4;
+            //slices[1].start = slices[0].end + 1;
+            //slices[1].end = width / 2;
+            //slices[2].start = slices[1].end + 1;
+            //slices[2].end = (3 * width) / 4;
+            //slices[3].start = slices[2].end + 1;
+            //slices[3].end = width - 1;
+
+            for (int i = 0; i < numOfClasses; i++)
                 FillSlices(slices[i]);
             return Img;
         }
 
-        static private double boxMuller(double R1, double R2)
+        private double boxMuller(double R1, double R2)
         {
             return  Math.Sqrt(-2 * Math.Log(R1, Math.E)) * 0.5 * Math.Cos(2 * Math.PI * R2);
         }
 
-        static private void FillSlices(Slice slice)
+        private void FillSlices(Slice slice)
         {
             Random GRand = new Random();
             Random BRand = new Random();
@@ -57,7 +110,7 @@ namespace Pattern_Recognition_Task_2
                     R1 = RRand.NextDouble();
                     R2 = RRand.NextDouble();
                     Z = boxMuller(R1, R2);
-
+                    
                     R = (int)(Z * slice.R_sigma + slice.R_mu);
                     if (R > 255)
                         R = 255;

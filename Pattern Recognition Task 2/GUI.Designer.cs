@@ -33,9 +33,16 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btn_browse = new System.Windows.Forms.Button();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.BSigmaTextBox = new System.Windows.Forms.TextBox();
+            this.BMuTextBox = new System.Windows.Forms.TextBox();
+            this.GSigmaTextBox = new System.Windows.Forms.TextBox();
+            this.GMuTextBox = new System.Windows.Forms.TextBox();
+            this.RSigmaTextBox = new System.Windows.Forms.TextBox();
+            this.RMuTextBox = new System.Windows.Forms.TextBox();
+            this.NumOfClassesComboBox = new System.Windows.Forms.ComboBox();
+            this.label19 = new System.Windows.Forms.Label();
             this.saveButton = new System.Windows.Forms.Button();
             this.generatedImagePictureBox = new System.Windows.Forms.PictureBox();
-            this.BSigmaTextBox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -44,14 +51,13 @@
             this.label15 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.RSigmaTextBox = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
-            this.GSigmaTextBox = new System.Windows.Forms.TextBox();
             this.widthTextBox = new System.Windows.Forms.TextBox();
             this.hieghtTextBox = new System.Windows.Forms.TextBox();
             this.btn_generate = new System.Windows.Forms.Button();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.SaveSegmentedButton = new System.Windows.Forms.Button();
             this.resetButton = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -61,7 +67,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.ImagePath = new System.Windows.Forms.TextBox();
             this.SegmentImageButton = new System.Windows.Forms.Button();
-            this.UploadImageButton = new System.Windows.Forms.Button();
+            this.UploadGrayButton = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -88,10 +94,38 @@
             this.Class2 = new System.Windows.Forms.Label();
             this.Class1 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.SaveSegmentedButton = new System.Windows.Forms.Button();
-            this.RMuTextBox = new System.Windows.Forms.TextBox();
-            this.GMuTextBox = new System.Windows.Forms.TextBox();
-            this.BMuTextBox = new System.Windows.Forms.TextBox();
+            this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.AccuracyDataGridView = new System.Windows.Forms.DataGridView();
+            this.overAllAccuracyTextBox = new System.Windows.Forms.TextBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.ClassifyImageButton = new System.Windows.Forms.Button();
+            this.LambdaGridView = new System.Windows.Forms.DataGridView();
+            this.getGeneratedButton = new System.Windows.Forms.Button();
+            this.tabControl3 = new System.Windows.Forms.TabControl();
+            this.tabPage7 = new System.Windows.Forms.TabPage();
+            this.ColoredImagePictureBox = new System.Windows.Forms.PictureBox();
+            this.tabPage8 = new System.Windows.Forms.TabPage();
+            this.ClassifiedImagePictureBox = new System.Windows.Forms.PictureBox();
+            this.tabPage9 = new System.Windows.Forms.TabPage();
+            this.ConfusionMatrixDataGrid = new System.Windows.Forms.DataGridView();
+            this.tabPage10 = new System.Windows.Forms.TabPage();
+            this.ClassifyColoredUploadedButton = new System.Windows.Forms.Button();
+            this.tabControl4 = new System.Windows.Forms.TabControl();
+            this.tabPage11 = new System.Windows.Forms.TabPage();
+            this.coloredUploadedPictureBox = new System.Windows.Forms.PictureBox();
+            this.tabPage12 = new System.Windows.Forms.TabPage();
+            this.ClassifiedUploadedPictureBox = new System.Windows.Forms.PictureBox();
+            this.NumOfClicksTextBox = new System.Windows.Forms.TextBox();
+            this.numOfClassesTextBox = new System.Windows.Forms.TextBox();
+            this.getMuandSigmaButton = new System.Windows.Forms.Button();
+            this.LambdaLoadedGridView = new System.Windows.Forms.DataGridView();
+            this.MuAndSigmaGridView = new System.Windows.Forms.DataGridView();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.UploadColordButton = new System.Windows.Forms.Button();
+            this.SaveImageButton = new System.Windows.Forms.Button();
             this.tabControl2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -105,6 +139,24 @@
             ((System.ComponentModel.ISupportInitialize)(this.AfterSegmentationPictureBox)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            this.tabPage6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.AccuracyDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LambdaGridView)).BeginInit();
+            this.tabControl3.SuspendLayout();
+            this.tabPage7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ColoredImagePictureBox)).BeginInit();
+            this.tabPage8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ClassifiedImagePictureBox)).BeginInit();
+            this.tabPage9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ConfusionMatrixDataGrid)).BeginInit();
+            this.tabPage10.SuspendLayout();
+            this.tabControl4.SuspendLayout();
+            this.tabPage11.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.coloredUploadedPictureBox)).BeginInit();
+            this.tabPage12.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ClassifiedUploadedPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LambdaLoadedGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MuAndSigmaGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl2
@@ -112,10 +164,12 @@
             this.tabControl2.Controls.Add(this.tabPage3);
             this.tabControl2.Controls.Add(this.tabPage4);
             this.tabControl2.Controls.Add(this.tabPage5);
+            this.tabControl2.Controls.Add(this.tabPage6);
+            this.tabControl2.Controls.Add(this.tabPage10);
             this.tabControl2.Location = new System.Drawing.Point(12, 12);
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.SelectedIndex = 0;
-            this.tabControl2.Size = new System.Drawing.Size(927, 510);
+            this.tabControl2.Size = new System.Drawing.Size(982, 510);
             this.tabControl2.TabIndex = 33;
             // 
             // tabPage3
@@ -125,7 +179,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(919, 484);
+            this.tabPage3.Size = new System.Drawing.Size(974, 484);
             this.tabPage3.TabIndex = 0;
             this.tabPage3.Text = "Display Image";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -152,12 +206,16 @@
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.BSigmaTextBox);
             this.tabPage4.Controls.Add(this.BMuTextBox);
+            this.tabPage4.Controls.Add(this.GSigmaTextBox);
             this.tabPage4.Controls.Add(this.GMuTextBox);
+            this.tabPage4.Controls.Add(this.RSigmaTextBox);
             this.tabPage4.Controls.Add(this.RMuTextBox);
+            this.tabPage4.Controls.Add(this.NumOfClassesComboBox);
+            this.tabPage4.Controls.Add(this.label19);
             this.tabPage4.Controls.Add(this.saveButton);
             this.tabPage4.Controls.Add(this.generatedImagePictureBox);
-            this.tabPage4.Controls.Add(this.BSigmaTextBox);
             this.tabPage4.Controls.Add(this.label5);
             this.tabPage4.Controls.Add(this.label12);
             this.tabPage4.Controls.Add(this.label6);
@@ -166,21 +224,97 @@
             this.tabPage4.Controls.Add(this.label15);
             this.tabPage4.Controls.Add(this.comboBox1);
             this.tabPage4.Controls.Add(this.label16);
-            this.tabPage4.Controls.Add(this.RSigmaTextBox);
             this.tabPage4.Controls.Add(this.label17);
             this.tabPage4.Controls.Add(this.label18);
-            this.tabPage4.Controls.Add(this.GSigmaTextBox);
             this.tabPage4.Controls.Add(this.widthTextBox);
             this.tabPage4.Controls.Add(this.hieghtTextBox);
             this.tabPage4.Controls.Add(this.btn_generate);
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(919, 484);
+            this.tabPage4.Size = new System.Drawing.Size(974, 484);
             this.tabPage4.TabIndex = 1;
             this.tabPage4.Text = "Generate Image";
             this.tabPage4.UseVisualStyleBackColor = true;
             this.tabPage4.Click += new System.EventHandler(this.tabPage4_Click);
+            // 
+            // BSigmaTextBox
+            // 
+            this.BSigmaTextBox.Location = new System.Drawing.Point(134, 352);
+            this.BSigmaTextBox.Name = "BSigmaTextBox";
+            this.BSigmaTextBox.Size = new System.Drawing.Size(100, 20);
+            this.BSigmaTextBox.TabIndex = 79;
+            this.BSigmaTextBox.TextChanged += new System.EventHandler(this.BSigmaTextBox_TextChanged);
+            // 
+            // BMuTextBox
+            // 
+            this.BMuTextBox.Location = new System.Drawing.Point(6, 352);
+            this.BMuTextBox.Name = "BMuTextBox";
+            this.BMuTextBox.Size = new System.Drawing.Size(100, 20);
+            this.BMuTextBox.TabIndex = 78;
+            this.BMuTextBox.TextChanged += new System.EventHandler(this.BMuTextBox_TextChanged);
+            // 
+            // GSigmaTextBox
+            // 
+            this.GSigmaTextBox.Location = new System.Drawing.Point(134, 269);
+            this.GSigmaTextBox.Name = "GSigmaTextBox";
+            this.GSigmaTextBox.Size = new System.Drawing.Size(100, 20);
+            this.GSigmaTextBox.TabIndex = 77;
+            this.GSigmaTextBox.TextChanged += new System.EventHandler(this.GSigmaTextBox_TextChanged);
+            // 
+            // GMuTextBox
+            // 
+            this.GMuTextBox.Location = new System.Drawing.Point(6, 269);
+            this.GMuTextBox.Name = "GMuTextBox";
+            this.GMuTextBox.Size = new System.Drawing.Size(100, 20);
+            this.GMuTextBox.TabIndex = 76;
+            this.GMuTextBox.TextChanged += new System.EventHandler(this.GMuTextBox_TextChanged);
+            // 
+            // RSigmaTextBox
+            // 
+            this.RSigmaTextBox.Location = new System.Drawing.Point(134, 183);
+            this.RSigmaTextBox.Name = "RSigmaTextBox";
+            this.RSigmaTextBox.Size = new System.Drawing.Size(100, 20);
+            this.RSigmaTextBox.TabIndex = 75;
+            this.RSigmaTextBox.TextChanged += new System.EventHandler(this.RSigmaTextBox_TextChanged);
+            // 
+            // RMuTextBox
+            // 
+            this.RMuTextBox.Location = new System.Drawing.Point(6, 183);
+            this.RMuTextBox.Name = "RMuTextBox";
+            this.RMuTextBox.Size = new System.Drawing.Size(100, 20);
+            this.RMuTextBox.TabIndex = 74;
+            this.RMuTextBox.TextChanged += new System.EventHandler(this.RMuTextBox_TextChanged_1);
+            // 
+            // NumOfClassesComboBox
+            // 
+            this.NumOfClassesComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.NumOfClassesComboBox.FormattingEnabled = true;
+            this.NumOfClassesComboBox.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10"});
+            this.NumOfClassesComboBox.Location = new System.Drawing.Point(134, 73);
+            this.NumOfClassesComboBox.Name = "NumOfClassesComboBox";
+            this.NumOfClassesComboBox.Size = new System.Drawing.Size(87, 21);
+            this.NumOfClassesComboBox.TabIndex = 73;
+            this.NumOfClassesComboBox.SelectedIndexChanged += new System.EventHandler(this.NumOfClassesComboBox_SelectedIndexChanged);
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(18, 81);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(98, 13);
+            this.label19.TabIndex = 72;
+            this.label19.Text = "Number Of Classes";
             // 
             // saveButton
             // 
@@ -202,15 +336,6 @@
             this.generatedImagePictureBox.TabIndex = 41;
             this.generatedImagePictureBox.TabStop = false;
             this.generatedImagePictureBox.Click += new System.EventHandler(this.pictureBox2_Click);
-            // 
-            // BSigmaTextBox
-            // 
-            this.BSigmaTextBox.Location = new System.Drawing.Point(141, 355);
-            this.BSigmaTextBox.Name = "BSigmaTextBox";
-            this.BSigmaTextBox.Size = new System.Drawing.Size(100, 20);
-            this.BSigmaTextBox.TabIndex = 39;
-            this.BSigmaTextBox.Text = "0";
-            this.BSigmaTextBox.TextChanged += new System.EventHandler(this.BSigmaTextBox_TextChanged);
             // 
             // label5
             // 
@@ -275,7 +400,7 @@
             "2",
             "3",
             "4"});
-            this.comboBox1.Location = new System.Drawing.Point(38, 110);
+            this.comboBox1.Location = new System.Drawing.Point(38, 131);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(100, 21);
             this.comboBox1.TabIndex = 32;
@@ -285,20 +410,11 @@
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(35, 91);
+            this.label16.Location = new System.Drawing.Point(49, 112);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(89, 16);
             this.label16.TabIndex = 31;
             this.label16.Text = "Slice Number";
-            // 
-            // RSigmaTextBox
-            // 
-            this.RSigmaTextBox.Location = new System.Drawing.Point(141, 186);
-            this.RSigmaTextBox.Name = "RSigmaTextBox";
-            this.RSigmaTextBox.Size = new System.Drawing.Size(100, 20);
-            this.RSigmaTextBox.TabIndex = 26;
-            this.RSigmaTextBox.Text = "0";
-            this.RSigmaTextBox.TextChanged += new System.EventHandler(this.RSigmaTextBox_TextChanged);
             // 
             // label17
             // 
@@ -319,15 +435,6 @@
             this.label18.Size = new System.Drawing.Size(88, 16);
             this.label18.TabIndex = 29;
             this.label18.Text = "Image Height";
-            // 
-            // GSigmaTextBox
-            // 
-            this.GSigmaTextBox.Location = new System.Drawing.Point(141, 272);
-            this.GSigmaTextBox.Name = "GSigmaTextBox";
-            this.GSigmaTextBox.Size = new System.Drawing.Size(100, 20);
-            this.GSigmaTextBox.TabIndex = 25;
-            this.GSigmaTextBox.Text = "0";
-            this.GSigmaTextBox.TextChanged += new System.EventHandler(this.GSigmaTextBox_TextChanged);
             // 
             // widthTextBox
             // 
@@ -362,7 +469,7 @@
             this.tabPage5.Controls.Add(this.label7);
             this.tabPage5.Controls.Add(this.ImagePath);
             this.tabPage5.Controls.Add(this.SegmentImageButton);
-            this.tabPage5.Controls.Add(this.UploadImageButton);
+            this.tabPage5.Controls.Add(this.UploadGrayButton);
             this.tabPage5.Controls.Add(this.label4);
             this.tabPage5.Controls.Add(this.label3);
             this.tabPage5.Controls.Add(this.label2);
@@ -375,10 +482,20 @@
             this.tabPage5.Controls.Add(this.label1);
             this.tabPage5.Location = new System.Drawing.Point(4, 22);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(919, 484);
+            this.tabPage5.Size = new System.Drawing.Size(974, 484);
             this.tabPage5.TabIndex = 2;
             this.tabPage5.Text = "Classify Greyscale Image";
             this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // SaveSegmentedButton
+            // 
+            this.SaveSegmentedButton.Location = new System.Drawing.Point(355, 359);
+            this.SaveSegmentedButton.Name = "SaveSegmentedButton";
+            this.SaveSegmentedButton.Size = new System.Drawing.Size(75, 50);
+            this.SaveSegmentedButton.TabIndex = 64;
+            this.SaveSegmentedButton.Text = "Save Segmented Image";
+            this.SaveSegmentedButton.UseVisualStyleBackColor = true;
+            this.SaveSegmentedButton.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // resetButton
             // 
@@ -473,15 +590,15 @@
             this.SegmentImageButton.UseVisualStyleBackColor = true;
             this.SegmentImageButton.Click += new System.EventHandler(this.SegmentImageButton_Click_1);
             // 
-            // UploadImageButton
+            // UploadGrayButton
             // 
-            this.UploadImageButton.Location = new System.Drawing.Point(40, 49);
-            this.UploadImageButton.Name = "UploadImageButton";
-            this.UploadImageButton.Size = new System.Drawing.Size(75, 38);
-            this.UploadImageButton.TabIndex = 58;
-            this.UploadImageButton.Text = "Upload Image";
-            this.UploadImageButton.UseVisualStyleBackColor = true;
-            this.UploadImageButton.Click += new System.EventHandler(this.UploadImageButton_Click_1);
+            this.UploadGrayButton.Location = new System.Drawing.Point(40, 49);
+            this.UploadGrayButton.Name = "UploadGrayButton";
+            this.UploadGrayButton.Size = new System.Drawing.Size(75, 38);
+            this.UploadGrayButton.TabIndex = 58;
+            this.UploadGrayButton.Text = "Upload Image";
+            this.UploadGrayButton.UseVisualStyleBackColor = true;
+            this.UploadGrayButton.Click += new System.EventHandler(this.UploadImageButton_Click_1);
             // 
             // label4
             // 
@@ -516,7 +633,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 44.13408F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 55.86592F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 74F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 87F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 94F));
             this.tableLayoutPanel1.Controls.Add(this.Mu4TextBox, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.label11, 3, 3);
             this.tableLayoutPanel1.Controls.Add(this.Mu3TextBox, 0, 2);
@@ -547,7 +664,7 @@
             // 
             this.Mu4TextBox.Location = new System.Drawing.Point(3, 100);
             this.Mu4TextBox.Name = "Mu4TextBox";
-            this.Mu4TextBox.Size = new System.Drawing.Size(68, 20);
+            this.Mu4TextBox.Size = new System.Drawing.Size(65, 20);
             this.Mu4TextBox.TabIndex = 66;
             // 
             // label11
@@ -556,16 +673,16 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label11.BackColor = System.Drawing.Color.Yellow;
-            this.label11.Location = new System.Drawing.Point(245, 97);
+            this.label11.Location = new System.Drawing.Point(238, 97);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(82, 32);
+            this.label11.Size = new System.Drawing.Size(89, 32);
             this.label11.TabIndex = 23;
             // 
             // Mu3TextBox
             // 
             this.Mu3TextBox.Location = new System.Drawing.Point(3, 67);
             this.Mu3TextBox.Name = "Mu3TextBox";
-            this.Mu3TextBox.Size = new System.Drawing.Size(68, 20);
+            this.Mu3TextBox.Size = new System.Drawing.Size(65, 20);
             this.Mu3TextBox.TabIndex = 65;
             // 
             // label10
@@ -574,23 +691,23 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label10.BackColor = System.Drawing.Color.Blue;
-            this.label10.Location = new System.Drawing.Point(245, 64);
+            this.label10.Location = new System.Drawing.Point(238, 64);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(82, 33);
+            this.label10.Size = new System.Drawing.Size(89, 33);
             this.label10.TabIndex = 22;
             // 
             // Mu2TextBox
             // 
             this.Mu2TextBox.Location = new System.Drawing.Point(3, 35);
             this.Mu2TextBox.Name = "Mu2TextBox";
-            this.Mu2TextBox.Size = new System.Drawing.Size(68, 20);
+            this.Mu2TextBox.Size = new System.Drawing.Size(65, 20);
             this.Mu2TextBox.TabIndex = 64;
             // 
             // Mu1TextBox
             // 
             this.Mu1TextBox.Location = new System.Drawing.Point(3, 3);
             this.Mu1TextBox.Name = "Mu1TextBox";
-            this.Mu1TextBox.Size = new System.Drawing.Size(68, 20);
+            this.Mu1TextBox.Size = new System.Drawing.Size(65, 20);
             this.Mu1TextBox.TabIndex = 63;
             // 
             // label9
@@ -599,56 +716,56 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label9.BackColor = System.Drawing.Color.Lime;
-            this.label9.Location = new System.Drawing.Point(245, 32);
+            this.label9.Location = new System.Drawing.Point(238, 32);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(82, 32);
+            this.label9.Size = new System.Drawing.Size(89, 32);
             this.label9.TabIndex = 21;
             // 
             // prior3TextBox
             // 
-            this.prior3TextBox.Location = new System.Drawing.Point(171, 67);
+            this.prior3TextBox.Location = new System.Drawing.Point(164, 67);
             this.prior3TextBox.Name = "prior3TextBox";
             this.prior3TextBox.Size = new System.Drawing.Size(67, 20);
             this.prior3TextBox.TabIndex = 18;
             // 
             // prior2TextBox
             // 
-            this.prior2TextBox.Location = new System.Drawing.Point(171, 35);
+            this.prior2TextBox.Location = new System.Drawing.Point(164, 35);
             this.prior2TextBox.Name = "prior2TextBox";
             this.prior2TextBox.Size = new System.Drawing.Size(67, 20);
             this.prior2TextBox.TabIndex = 17;
             // 
             // prior1TextBox
             // 
-            this.prior1TextBox.Location = new System.Drawing.Point(171, 3);
+            this.prior1TextBox.Location = new System.Drawing.Point(164, 3);
             this.prior1TextBox.Name = "prior1TextBox";
             this.prior1TextBox.Size = new System.Drawing.Size(67, 20);
             this.prior1TextBox.TabIndex = 16;
             // 
             // segma1TextBox
             // 
-            this.segma1TextBox.Location = new System.Drawing.Point(77, 3);
+            this.segma1TextBox.Location = new System.Drawing.Point(74, 3);
             this.segma1TextBox.Name = "segma1TextBox";
             this.segma1TextBox.Size = new System.Drawing.Size(80, 20);
             this.segma1TextBox.TabIndex = 12;
             // 
             // segma4TextBox
             // 
-            this.segma4TextBox.Location = new System.Drawing.Point(77, 100);
+            this.segma4TextBox.Location = new System.Drawing.Point(74, 100);
             this.segma4TextBox.Name = "segma4TextBox";
             this.segma4TextBox.Size = new System.Drawing.Size(80, 20);
             this.segma4TextBox.TabIndex = 15;
             // 
             // segma2TextBox
             // 
-            this.segma2TextBox.Location = new System.Drawing.Point(77, 35);
+            this.segma2TextBox.Location = new System.Drawing.Point(74, 35);
             this.segma2TextBox.Name = "segma2TextBox";
             this.segma2TextBox.Size = new System.Drawing.Size(80, 20);
             this.segma2TextBox.TabIndex = 13;
             // 
             // segma3TextBox
             // 
-            this.segma3TextBox.Location = new System.Drawing.Point(77, 67);
+            this.segma3TextBox.Location = new System.Drawing.Point(74, 67);
             this.segma3TextBox.Name = "segma3TextBox";
             this.segma3TextBox.Size = new System.Drawing.Size(80, 20);
             this.segma3TextBox.TabIndex = 14;
@@ -659,14 +776,14 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label8.BackColor = System.Drawing.Color.Red;
-            this.label8.Location = new System.Drawing.Point(245, 0);
+            this.label8.Location = new System.Drawing.Point(238, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(82, 32);
+            this.label8.Size = new System.Drawing.Size(89, 32);
             this.label8.TabIndex = 20;
             // 
             // prior4TextBox
             // 
-            this.prior4TextBox.Location = new System.Drawing.Point(171, 100);
+            this.prior4TextBox.Location = new System.Drawing.Point(164, 100);
             this.prior4TextBox.Name = "prior4TextBox";
             this.prior4TextBox.Size = new System.Drawing.Size(67, 20);
             this.prior4TextBox.TabIndex = 19;
@@ -729,45 +846,338 @@
             this.label1.TabIndex = 48;
             this.label1.Text = "Number of classes";
             // 
-            // SaveSegmentedButton
+            // tabPage6
             // 
-            this.SaveSegmentedButton.Location = new System.Drawing.Point(355, 359);
-            this.SaveSegmentedButton.Name = "SaveSegmentedButton";
-            this.SaveSegmentedButton.Size = new System.Drawing.Size(75, 50);
-            this.SaveSegmentedButton.TabIndex = 64;
-            this.SaveSegmentedButton.Text = "Save Segmented Image";
-            this.SaveSegmentedButton.UseVisualStyleBackColor = true;
-            this.SaveSegmentedButton.Click += new System.EventHandler(this.button1_Click_1);
+            this.tabPage6.Controls.Add(this.AccuracyDataGridView);
+            this.tabPage6.Controls.Add(this.overAllAccuracyTextBox);
+            this.tabPage6.Controls.Add(this.label22);
+            this.tabPage6.Controls.Add(this.label21);
+            this.tabPage6.Controls.Add(this.label20);
+            this.tabPage6.Controls.Add(this.ClassifyImageButton);
+            this.tabPage6.Controls.Add(this.LambdaGridView);
+            this.tabPage6.Controls.Add(this.getGeneratedButton);
+            this.tabPage6.Controls.Add(this.tabControl3);
+            this.tabPage6.Location = new System.Drawing.Point(4, 22);
+            this.tabPage6.Name = "tabPage6";
+            this.tabPage6.Size = new System.Drawing.Size(974, 484);
+            this.tabPage6.TabIndex = 3;
+            this.tabPage6.Text = "Segment Generated Colored Image";
+            this.tabPage6.UseVisualStyleBackColor = true;
             // 
-            // RMuTextBox
+            // AccuracyDataGridView
             // 
-            this.RMuTextBox.Location = new System.Drawing.Point(16, 186);
-            this.RMuTextBox.Name = "RMuTextBox";
-            this.RMuTextBox.Size = new System.Drawing.Size(100, 20);
-            this.RMuTextBox.TabIndex = 68;
-            this.RMuTextBox.TextChanged += new System.EventHandler(this.RMuTextBox_TextChanged);
+            this.AccuracyDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.AccuracyDataGridView.Location = new System.Drawing.Point(67, 391);
+            this.AccuracyDataGridView.Name = "AccuracyDataGridView";
+            this.AccuracyDataGridView.ReadOnly = true;
+            this.AccuracyDataGridView.Size = new System.Drawing.Size(286, 86);
+            this.AccuracyDataGridView.TabIndex = 11;
             // 
-            // GMuTextBox
+            // overAllAccuracyTextBox
             // 
-            this.GMuTextBox.Location = new System.Drawing.Point(16, 272);
-            this.GMuTextBox.Name = "GMuTextBox";
-            this.GMuTextBox.Size = new System.Drawing.Size(100, 20);
-            this.GMuTextBox.TabIndex = 69;
-            this.GMuTextBox.TextChanged += new System.EventHandler(this.GMuTextBox_TextChanged);
+            this.overAllAccuracyTextBox.Location = new System.Drawing.Point(163, 353);
+            this.overAllAccuracyTextBox.Name = "overAllAccuracyTextBox";
+            this.overAllAccuracyTextBox.ReadOnly = true;
+            this.overAllAccuracyTextBox.Size = new System.Drawing.Size(100, 20);
+            this.overAllAccuracyTextBox.TabIndex = 10;
             // 
-            // BMuTextBox
+            // label22
             // 
-            this.BMuTextBox.Location = new System.Drawing.Point(16, 355);
-            this.BMuTextBox.Name = "BMuTextBox";
-            this.BMuTextBox.Size = new System.Drawing.Size(100, 20);
-            this.BMuTextBox.TabIndex = 70;
-            this.BMuTextBox.TextChanged += new System.EventHandler(this.BMuTextBox_TextChanged);
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(10, 405);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(51, 13);
+            this.label22.TabIndex = 9;
+            this.label22.Text = "Accuracy";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(10, 356);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(88, 13);
+            this.label21.TabIndex = 8;
+            this.label21.Text = "Overall Accuracy";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(25, 103);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(73, 13);
+            this.label20.TabIndex = 7;
+            this.label20.Text = "Lambda Table";
+            // 
+            // ClassifyImageButton
+            // 
+            this.ClassifyImageButton.Location = new System.Drawing.Point(201, 25);
+            this.ClassifyImageButton.Name = "ClassifyImageButton";
+            this.ClassifyImageButton.Size = new System.Drawing.Size(75, 44);
+            this.ClassifyImageButton.TabIndex = 6;
+            this.ClassifyImageButton.Text = "Classify Pixels";
+            this.ClassifyImageButton.UseVisualStyleBackColor = true;
+            this.ClassifyImageButton.Click += new System.EventHandler(this.ClassifyImageButton_Click);
+            // 
+            // LambdaGridView
+            // 
+            this.LambdaGridView.BackgroundColor = System.Drawing.SystemColors.ControlLight;
+            this.LambdaGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.LambdaGridView.Location = new System.Drawing.Point(3, 129);
+            this.LambdaGridView.Name = "LambdaGridView";
+            this.LambdaGridView.Size = new System.Drawing.Size(350, 197);
+            this.LambdaGridView.TabIndex = 5;
+            this.LambdaGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.LambdaGridView_CellContentClick);
+            // 
+            // getGeneratedButton
+            // 
+            this.getGeneratedButton.Location = new System.Drawing.Point(42, 25);
+            this.getGeneratedButton.Name = "getGeneratedButton";
+            this.getGeneratedButton.Size = new System.Drawing.Size(91, 44);
+            this.getGeneratedButton.TabIndex = 1;
+            this.getGeneratedButton.Text = "Get Generated Image";
+            this.getGeneratedButton.UseVisualStyleBackColor = true;
+            this.getGeneratedButton.Click += new System.EventHandler(this.getGeneratedButton_Click);
+            // 
+            // tabControl3
+            // 
+            this.tabControl3.Controls.Add(this.tabPage7);
+            this.tabControl3.Controls.Add(this.tabPage8);
+            this.tabControl3.Controls.Add(this.tabPage9);
+            this.tabControl3.Location = new System.Drawing.Point(362, 3);
+            this.tabControl3.Name = "tabControl3";
+            this.tabControl3.SelectedIndex = 0;
+            this.tabControl3.Size = new System.Drawing.Size(609, 478);
+            this.tabControl3.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
+            this.tabControl3.TabIndex = 0;
+            // 
+            // tabPage7
+            // 
+            this.tabPage7.Controls.Add(this.ColoredImagePictureBox);
+            this.tabPage7.Location = new System.Drawing.Point(4, 22);
+            this.tabPage7.Name = "tabPage7";
+            this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage7.Size = new System.Drawing.Size(601, 452);
+            this.tabPage7.TabIndex = 0;
+            this.tabPage7.Text = "Loaded Image";
+            this.tabPage7.UseVisualStyleBackColor = true;
+            // 
+            // ColoredImagePictureBox
+            // 
+            this.ColoredImagePictureBox.Location = new System.Drawing.Point(0, 0);
+            this.ColoredImagePictureBox.Name = "ColoredImagePictureBox";
+            this.ColoredImagePictureBox.Size = new System.Drawing.Size(601, 440);
+            this.ColoredImagePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ColoredImagePictureBox.TabIndex = 0;
+            this.ColoredImagePictureBox.TabStop = false;
+            // 
+            // tabPage8
+            // 
+            this.tabPage8.Controls.Add(this.ClassifiedImagePictureBox);
+            this.tabPage8.Location = new System.Drawing.Point(4, 22);
+            this.tabPage8.Name = "tabPage8";
+            this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage8.Size = new System.Drawing.Size(601, 452);
+            this.tabPage8.TabIndex = 1;
+            this.tabPage8.Text = "Classified Image";
+            this.tabPage8.UseVisualStyleBackColor = true;
+            // 
+            // ClassifiedImagePictureBox
+            // 
+            this.ClassifiedImagePictureBox.Location = new System.Drawing.Point(0, 0);
+            this.ClassifiedImagePictureBox.Name = "ClassifiedImagePictureBox";
+            this.ClassifiedImagePictureBox.Size = new System.Drawing.Size(601, 452);
+            this.ClassifiedImagePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ClassifiedImagePictureBox.TabIndex = 1;
+            this.ClassifiedImagePictureBox.TabStop = false;
+            // 
+            // tabPage9
+            // 
+            this.tabPage9.Controls.Add(this.ConfusionMatrixDataGrid);
+            this.tabPage9.Location = new System.Drawing.Point(4, 22);
+            this.tabPage9.Name = "tabPage9";
+            this.tabPage9.Size = new System.Drawing.Size(601, 452);
+            this.tabPage9.TabIndex = 2;
+            this.tabPage9.Text = "Confusion Matrix";
+            this.tabPage9.UseVisualStyleBackColor = true;
+            // 
+            // ConfusionMatrixDataGrid
+            // 
+            this.ConfusionMatrixDataGrid.BackgroundColor = System.Drawing.SystemColors.ControlLight;
+            this.ConfusionMatrixDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ConfusionMatrixDataGrid.Location = new System.Drawing.Point(3, 3);
+            this.ConfusionMatrixDataGrid.Name = "ConfusionMatrixDataGrid";
+            this.ConfusionMatrixDataGrid.ReadOnly = true;
+            this.ConfusionMatrixDataGrid.Size = new System.Drawing.Size(558, 327);
+            this.ConfusionMatrixDataGrid.TabIndex = 6;
+            // 
+            // tabPage10
+            // 
+            this.tabPage10.Controls.Add(this.SaveImageButton);
+            this.tabPage10.Controls.Add(this.ClassifyColoredUploadedButton);
+            this.tabPage10.Controls.Add(this.tabControl4);
+            this.tabPage10.Controls.Add(this.NumOfClicksTextBox);
+            this.tabPage10.Controls.Add(this.numOfClassesTextBox);
+            this.tabPage10.Controls.Add(this.getMuandSigmaButton);
+            this.tabPage10.Controls.Add(this.LambdaLoadedGridView);
+            this.tabPage10.Controls.Add(this.MuAndSigmaGridView);
+            this.tabPage10.Controls.Add(this.label24);
+            this.tabPage10.Controls.Add(this.label23);
+            this.tabPage10.Controls.Add(this.UploadColordButton);
+            this.tabPage10.Location = new System.Drawing.Point(4, 22);
+            this.tabPage10.Name = "tabPage10";
+            this.tabPage10.Size = new System.Drawing.Size(974, 484);
+            this.tabPage10.TabIndex = 4;
+            this.tabPage10.Text = "Segment Colored Image";
+            this.tabPage10.UseVisualStyleBackColor = true;
+            // 
+            // ClassifyColoredUploadedButton
+            // 
+            this.ClassifyColoredUploadedButton.Location = new System.Drawing.Point(311, 19);
+            this.ClassifyColoredUploadedButton.Name = "ClassifyColoredUploadedButton";
+            this.ClassifyColoredUploadedButton.Size = new System.Drawing.Size(75, 37);
+            this.ClassifyColoredUploadedButton.TabIndex = 13;
+            this.ClassifyColoredUploadedButton.Text = "Classify Image";
+            this.ClassifyColoredUploadedButton.UseVisualStyleBackColor = true;
+            this.ClassifyColoredUploadedButton.Click += new System.EventHandler(this.ClassifyColoredUploadedButton_Click);
+            // 
+            // tabControl4
+            // 
+            this.tabControl4.Controls.Add(this.tabPage11);
+            this.tabControl4.Controls.Add(this.tabPage12);
+            this.tabControl4.Location = new System.Drawing.Point(425, 3);
+            this.tabControl4.Name = "tabControl4";
+            this.tabControl4.SelectedIndex = 0;
+            this.tabControl4.Size = new System.Drawing.Size(546, 478);
+            this.tabControl4.TabIndex = 12;
+            // 
+            // tabPage11
+            // 
+            this.tabPage11.Controls.Add(this.coloredUploadedPictureBox);
+            this.tabPage11.Location = new System.Drawing.Point(4, 22);
+            this.tabPage11.Name = "tabPage11";
+            this.tabPage11.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage11.Size = new System.Drawing.Size(538, 452);
+            this.tabPage11.TabIndex = 0;
+            this.tabPage11.Text = "Uploaded Image";
+            this.tabPage11.UseVisualStyleBackColor = true;
+            // 
+            // coloredUploadedPictureBox
+            // 
+            this.coloredUploadedPictureBox.Location = new System.Drawing.Point(0, 0);
+            this.coloredUploadedPictureBox.Name = "coloredUploadedPictureBox";
+            this.coloredUploadedPictureBox.Size = new System.Drawing.Size(538, 452);
+            this.coloredUploadedPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.coloredUploadedPictureBox.TabIndex = 4;
+            this.coloredUploadedPictureBox.TabStop = false;
+            this.coloredUploadedPictureBox.Click += new System.EventHandler(this.coloredUploadedPictureBox_Click);
+            // 
+            // tabPage12
+            // 
+            this.tabPage12.Controls.Add(this.ClassifiedUploadedPictureBox);
+            this.tabPage12.Location = new System.Drawing.Point(4, 22);
+            this.tabPage12.Name = "tabPage12";
+            this.tabPage12.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage12.Size = new System.Drawing.Size(538, 452);
+            this.tabPage12.TabIndex = 1;
+            this.tabPage12.Text = "Classified Image";
+            this.tabPage12.UseVisualStyleBackColor = true;
+            // 
+            // ClassifiedUploadedPictureBox
+            // 
+            this.ClassifiedUploadedPictureBox.Location = new System.Drawing.Point(0, 0);
+            this.ClassifiedUploadedPictureBox.Name = "ClassifiedUploadedPictureBox";
+            this.ClassifiedUploadedPictureBox.Size = new System.Drawing.Size(538, 452);
+            this.ClassifiedUploadedPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ClassifiedUploadedPictureBox.TabIndex = 0;
+            this.ClassifiedUploadedPictureBox.TabStop = false;
+            // 
+            // NumOfClicksTextBox
+            // 
+            this.NumOfClicksTextBox.Location = new System.Drawing.Point(225, 75);
+            this.NumOfClicksTextBox.Name = "NumOfClicksTextBox";
+            this.NumOfClicksTextBox.Size = new System.Drawing.Size(100, 20);
+            this.NumOfClicksTextBox.TabIndex = 11;
+            this.NumOfClicksTextBox.TextChanged += new System.EventHandler(this.NumOfClicksTextBox_TextChanged);
+            // 
+            // numOfClassesTextBox
+            // 
+            this.numOfClassesTextBox.Location = new System.Drawing.Point(64, 73);
+            this.numOfClassesTextBox.Name = "numOfClassesTextBox";
+            this.numOfClassesTextBox.Size = new System.Drawing.Size(100, 20);
+            this.numOfClassesTextBox.TabIndex = 10;
+            this.numOfClassesTextBox.TextChanged += new System.EventHandler(this.numOfClassesTextBox_TextChanged);
+            // 
+            // getMuandSigmaButton
+            // 
+            this.getMuandSigmaButton.Location = new System.Drawing.Point(157, 19);
+            this.getMuandSigmaButton.Name = "getMuandSigmaButton";
+            this.getMuandSigmaButton.Size = new System.Drawing.Size(99, 35);
+            this.getMuandSigmaButton.TabIndex = 9;
+            this.getMuandSigmaButton.Text = "Get Mu and Sigma";
+            this.getMuandSigmaButton.UseVisualStyleBackColor = true;
+            this.getMuandSigmaButton.Click += new System.EventHandler(this.button1_Click_2);
+            // 
+            // LambdaLoadedGridView
+            // 
+            this.LambdaLoadedGridView.BackgroundColor = System.Drawing.SystemColors.ControlLight;
+            this.LambdaLoadedGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.LambdaLoadedGridView.Location = new System.Drawing.Point(16, 298);
+            this.LambdaLoadedGridView.Name = "LambdaLoadedGridView";
+            this.LambdaLoadedGridView.Size = new System.Drawing.Size(388, 163);
+            this.LambdaLoadedGridView.TabIndex = 8;
+            // 
+            // MuAndSigmaGridView
+            // 
+            this.MuAndSigmaGridView.BackgroundColor = System.Drawing.SystemColors.ControlLight;
+            this.MuAndSigmaGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.MuAndSigmaGridView.Location = new System.Drawing.Point(17, 101);
+            this.MuAndSigmaGridView.Name = "MuAndSigmaGridView";
+            this.MuAndSigmaGridView.Size = new System.Drawing.Size(387, 191);
+            this.MuAndSigmaGridView.TabIndex = 7;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(237, 57);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(88, 13);
+            this.label24.TabIndex = 6;
+            this.label24.Text = "Number Of Clicks";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(61, 57);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(98, 13);
+            this.label23.TabIndex = 5;
+            this.label23.Text = "Number Of Classes";
+            // 
+            // UploadColordButton
+            // 
+            this.UploadColordButton.Location = new System.Drawing.Point(21, 25);
+            this.UploadColordButton.Name = "UploadColordButton";
+            this.UploadColordButton.Size = new System.Drawing.Size(91, 23);
+            this.UploadColordButton.TabIndex = 3;
+            this.UploadColordButton.Text = "Upload Image";
+            this.UploadColordButton.UseVisualStyleBackColor = true;
+            this.UploadColordButton.Click += new System.EventHandler(this.UploadColordButton_Click_1);
+            // 
+            // SaveImageButton
+            // 
+            this.SaveImageButton.Location = new System.Drawing.Point(344, 62);
+            this.SaveImageButton.Name = "SaveImageButton";
+            this.SaveImageButton.Size = new System.Drawing.Size(75, 23);
+            this.SaveImageButton.TabIndex = 14;
+            this.SaveImageButton.Text = "Save";
+            this.SaveImageButton.UseVisualStyleBackColor = true;
+            this.SaveImageButton.Click += new System.EventHandler(this.SaveImageButton_Click);
             // 
             // GUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(951, 534);
+            this.ClientSize = new System.Drawing.Size(1006, 534);
             this.Controls.Add(this.tabControl2);
             this.Name = "GUI";
             this.Text = "Image Classifier";
@@ -787,6 +1197,26 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            this.tabPage6.ResumeLayout(false);
+            this.tabPage6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.AccuracyDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LambdaGridView)).EndInit();
+            this.tabControl3.ResumeLayout(false);
+            this.tabPage7.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ColoredImagePictureBox)).EndInit();
+            this.tabPage8.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ClassifiedImagePictureBox)).EndInit();
+            this.tabPage9.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ConfusionMatrixDataGrid)).EndInit();
+            this.tabPage10.ResumeLayout(false);
+            this.tabPage10.PerformLayout();
+            this.tabControl4.ResumeLayout(false);
+            this.tabPage11.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.coloredUploadedPictureBox)).EndInit();
+            this.tabPage12.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ClassifiedUploadedPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LambdaLoadedGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MuAndSigmaGridView)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -807,7 +1237,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox ImagePath;
         private System.Windows.Forms.Button SegmentImageButton;
-        private System.Windows.Forms.Button UploadImageButton;
+        private System.Windows.Forms.Button UploadGrayButton;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
@@ -830,7 +1260,6 @@
         private System.Windows.Forms.Label Class2;
         private System.Windows.Forms.Label Class1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox BSigmaTextBox;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label6;
@@ -839,10 +1268,8 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox RSigmaTextBox;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.TextBox GSigmaTextBox;
         private System.Windows.Forms.TextBox widthTextBox;
         private System.Windows.Forms.TextBox hieghtTextBox;
         private System.Windows.Forms.Button btn_generate;
@@ -854,9 +1281,46 @@
         private System.Windows.Forms.TextBox Mu2TextBox;
         private System.Windows.Forms.Button resetButton;
         private System.Windows.Forms.Button SaveSegmentedButton;
+        private System.Windows.Forms.TabPage tabPage6;
+        private System.Windows.Forms.Button getGeneratedButton;
+        private System.Windows.Forms.TabControl tabControl3;
+        private System.Windows.Forms.TabPage tabPage7;
+        private System.Windows.Forms.PictureBox ColoredImagePictureBox;
+        private System.Windows.Forms.TabPage tabPage8;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.ComboBox NumOfClassesComboBox;
+        private System.Windows.Forms.TextBox BSigmaTextBox;
         private System.Windows.Forms.TextBox BMuTextBox;
+        private System.Windows.Forms.TextBox GSigmaTextBox;
         private System.Windows.Forms.TextBox GMuTextBox;
+        private System.Windows.Forms.TextBox RSigmaTextBox;
         private System.Windows.Forms.TextBox RMuTextBox;
+        private System.Windows.Forms.DataGridView ConfusionMatrixDataGrid;
+        private System.Windows.Forms.DataGridView LambdaGridView;
+        private System.Windows.Forms.TabPage tabPage9;
+        private System.Windows.Forms.PictureBox ClassifiedImagePictureBox;
+        private System.Windows.Forms.TabPage tabPage10;
+        private System.Windows.Forms.Button UploadColordButton;
+        private System.Windows.Forms.Button ClassifyImageButton;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.DataGridView AccuracyDataGridView;
+        private System.Windows.Forms.TextBox overAllAccuracyTextBox;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.DataGridView LambdaLoadedGridView;
+        private System.Windows.Forms.DataGridView MuAndSigmaGridView;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.PictureBox coloredUploadedPictureBox;
+        private System.Windows.Forms.TextBox NumOfClicksTextBox;
+        private System.Windows.Forms.TextBox numOfClassesTextBox;
+        private System.Windows.Forms.Button getMuandSigmaButton;
+        private System.Windows.Forms.Button ClassifyColoredUploadedButton;
+        private System.Windows.Forms.TabControl tabControl4;
+        private System.Windows.Forms.TabPage tabPage11;
+        private System.Windows.Forms.TabPage tabPage12;
+        private System.Windows.Forms.PictureBox ClassifiedUploadedPictureBox;
+        private System.Windows.Forms.Button SaveImageButton;
     }
 }
 

@@ -11,6 +11,7 @@ namespace Pattern_Recognition_Task_2
     {
        
         private int num_of_classes;
+        private int num_of_actions;
         //classes properties (size of each array = num_of_classes) 
         private double [] prior;
         private double[] Mu;
