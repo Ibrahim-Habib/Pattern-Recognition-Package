@@ -50,20 +50,15 @@ namespace Pattern_Recognition_Task_2
                 evidence += likleihood[i] * prior[i];
             }
 
-            double maxPosterior = 0;
+            int maxPosteriorIdx = 0;
             for (int i = 0; i < num_of_classes; i++)
             {
-                postrior[i] = likleihood[i] / evidence;
-                maxPosterior = Math.Max(maxPosterior, postrior[i]);
+                postrior[i] = (likleihood[i]*prior[i]) / evidence;
+                if (postrior[i] > postrior[maxPosteriorIdx])
+                    maxPosteriorIdx = i;
             }
 
-            for (int i = 0; i < num_of_classes; i++)
-            {
-                if (postrior[i] == maxPosterior)
-                    return i;
-            }
-
-            return -1;
+            return maxPosteriorIdx;
         }
 
 
