@@ -11,9 +11,3 @@ D:\FCIS\4th year\First Term\Pattern Recognition\Tasks\Pattern Recognition Task 2
 D:\Osama\Programming\Projects\Pattern-Recognition-Package\Pattern Recognition Task 2\bin\Debug\Pattern Recognition Task 2.exe.config
 D:\Osama\Programming\Projects\Pattern-Recognition-Package\Pattern Recognition Task 2\obj\Debug\Pattern Recognition Task 2.exe
 D:\Osama\Programming\Projects\Pattern-Recognition-Package\Pattern Recognition Task 2\obj\Debug\Pattern Recognition Task 2.pdb
-D:\Osama\Programming\Projects\Pattern-Recognition-Package\Pattern Recognition Task 2\bin\Debug\Pattern Recognition Task 2.exe
-D:\Osama\Programming\Projects\Pattern-Recognition-Package\Pattern Recognition Task 2\bin\Debug\Pattern Recognition Task 2.pdb
-D:\Osama\Programming\Projects\Pattern-Recognition-Package\Pattern Recognition Task 2\obj\Debug\Pattern Recognition Task 2.csprojResolveAssemblyReference.cache
-D:\Osama\Programming\Projects\Pattern-Recognition-Package\Pattern Recognition Task 2\obj\Debug\Pattern_Recognition_Task_2.GUI.resources
-D:\Osama\Programming\Projects\Pattern-Recognition-Package\Pattern Recognition Task 2\obj\Debug\Pattern_Recognition_Task_2.Properties.Resources.resources
-D:\Osama\Programming\Projects\Pattern-Recognition-Package\Pattern Recognition Task 2\obj\Debug\Pattern Recognition Task 2.csproj.GenerateResource.Cache
