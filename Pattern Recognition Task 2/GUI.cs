@@ -25,6 +25,19 @@ namespace Pattern_Recognition_Task_2
         private int numOfClicks;
         private double[][] rValue, gValue, bValue;
         private double[] rMu, gMu, bMu, rSigma, gSigma, bSigma;
+        private bool startedTakingSamples;
+
+        //parzen Window Variables
+        private int parzenCurrentClick;
+        private int parzenNumClasses;
+        private int parzenNumSamples;
+        private bool parzenStartedTakingSamples;
+        private bool parzenIsGenerated;
+        //private double[][] parzenR, parzenG, parzenB;
+        private Color[][] parzenSamples;
+        Bitmap parzenSourceBitmap;
+        Bitmap parzenDestBitmap;
+        private int[,] parzenConfusionMatrix;
 
         public GUI()
         {
@@ -34,6 +47,7 @@ namespace Pattern_Recognition_Task_2
             numOfClassesTextBox.Text = "1";
             NumOfClicksTextBox.Text = "2";
             currentClass = 0;
+            parzenCurrentClick = 0;
             H = W = 300;
             imageGenerator = new GenImage();
             Mu1TextBox.Enabled = numericUpDown1.Value >= 1;
@@ -85,9 +99,21 @@ namespace Pattern_Recognition_Task_2
             prior4TextBox.Text = "0";
         }
 
-        
+        private void saveImage(PictureBox pictureBox)
+        {
+            SaveFileDialog dialog = new SaveFileDialog();
+            dialog.Filter = "All Picture Files |*.bmp;*.jpg;*.jpeg;*.jpe;*.png;|All Files (*.*)|*.*";
+            dialog.Title = "Save an Image";
+            dialog.CheckPathExists = true;
 
-        private void UploadImageButton_Click(object sender, EventArgs e)
+
+            if (dialog.ShowDialog() == DialogResult.OK)
+            {
+                pictureBox.Image.Save(dialog.FileName, System.Drawing.Imaging.ImageFormat.Jpeg);
+            }
+        }
+
+        private void uploadImage(ref Bitmap bm, PictureBox pb)
         {
             OpenFileDialog openFileDialog1 = new OpenFileDialog();
             openFileDialog1.Filter = "All Picture Files |*.bmp;*.jpg;*.jpeg;*.jpe;*.png;*.tif;*.tiff;|All Files (*.*)|*.*";
@@ -96,22 +122,26 @@ namespace Pattern_Recognition_Task_2
 
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                greyScaleImage = null;
+                coloredImage = null;
                 //Open the browsed image and display it
                 string OpenedFilePath = openFileDialog1.FileName;
-                
-                greyScaleImage = new Bitmap(OpenedFilePath);
-                if (greyScaleImage == null)
+
+                bm = new Bitmap(OpenedFilePath);
+                if (bm == null)
                     MessageBox.Show("Image can't be opened !", "Error", MessageBoxButtons.OK);
                 else
                 {
                     ImagePath.Text = OpenedFilePath;
-                    greyScalePictureBox.Image = greyScaleImage;
+                    pb.Image = bm;
                 }
 
             }
+            
+        }
 
-
+        private void UploadImageButton_Click(object sender, EventArgs e)
+        {
+            uploadImage(ref greyScaleImage, greyScalePictureBox);
         }
 
         private void SegmentImageButton_Click(object sender, EventArgs e)
@@ -131,18 +161,7 @@ namespace Pattern_Recognition_Task_2
 
         private void btn_browse_Click(object sender, EventArgs e)
         {
-            OpenFileDialog openFileDialog1 = new OpenFileDialog();
-            openFileDialog1.Filter = "All Picture Files |*.bmp;*.jpg;*.jpeg;*.jpe;*.png;|All Files (*.*)|*.*";
-            openFileDialog1.Title = "Open an Image";
-            openFileDialog1.CheckPathExists = true;
-
-            if (openFileDialog1.ShowDialog() == DialogResult.OK)
-            {
-                string OpenedFilePath = openFileDialog1.FileName;
-                source = new Bitmap(OpenedFilePath);
-                pictureBox1.Image = source;
-                pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            }
+            uploadImage(ref source, pictureBox1);
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -210,13 +229,7 @@ namespace Pattern_Recognition_Task_2
                 //source = GenImage.GenImg(slices, Height, Width);
                 coloredImage = imageGenerator.GenImg();
                 generatedImagePictureBox.Image = coloredImage;
-                //Form form = new Form();
-                //PictureBox pic = new PictureBox();
-                //pic.Image = source;
-                //pic.SizeMode = PictureBoxSizeMode.AutoSize;
-                //form.Controls.Add(pic);
-                //form.Show();
-            }
+               }
             catch (Exception)
             {
 
@@ -297,19 +310,8 @@ namespace Pattern_Recognition_Task_2
 
         private void UploadImageButton_Click_1(object sender, EventArgs e)
         {
-            OpenFileDialog openFileDialog1 = new OpenFileDialog();
-            openFileDialog1.Filter = "All Picture Files |*.bmp;*.jpg;*.jpeg;*.jpe;*.png;|All Files (*.*)|*.*";
-            openFileDialog1.Title = "Open an Image";
-            openFileDialog1.CheckPathExists = true;
-
-            if (openFileDialog1.ShowDialog() == DialogResult.OK)
-            {
-                string OpenedFilePath = openFileDialog1.FileName;
-                ImagePath.Text = OpenedFilePath;
-                greyScaleImage = new Bitmap(OpenedFilePath);
-                greyScalePictureBox.Image = greyScaleImage;
-            }
-
+            uploadImage(ref greyScaleImage, greyScalePictureBox);
+         
         }
 
         private void AfterSegmentationPictureBox_Click_1(object sender, EventArgs e)
@@ -319,16 +321,7 @@ namespace Pattern_Recognition_Task_2
 
         private void saveButton_Click(object sender, EventArgs e)
         {
-            SaveFileDialog dialog = new SaveFileDialog();
-            dialog.Filter = "All Picture Files |*.bmp;*.jpg;*.jpeg;*.jpe;*.png;|All Files (*.*)|*.*";
-            dialog.Title = "Open an Image";
-            dialog.CheckPathExists = true;
-           
-            
-            if (dialog.ShowDialog() == DialogResult.OK)
-            {
-                generatedImagePictureBox.Image.Save(dialog.FileName,System.Drawing.Imaging.ImageFormat.Jpeg);
-            }
+              saveImage(generatedImagePictureBox);
         }
 
         private void numericUpDown1_ValueChanged_1(object sender, EventArgs e)
@@ -414,16 +407,7 @@ namespace Pattern_Recognition_Task_2
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            SaveFileDialog dialog = new SaveFileDialog();
-            dialog.Filter = "All Picture Files |*.bmp;*.jpg;*.jpeg;*.jpe;*.png;|All Files (*.*)|*.*";
-            dialog.Title = "Open an Image";
-            dialog.CheckPathExists = true;
-
-
-            if (dialog.ShowDialog() == DialogResult.OK)
-            {
-                AfterSegmentationPictureBox.Image.Save(dialog.FileName, System.Drawing.Imaging.ImageFormat.Jpeg);
-            }
+            saveImage(AfterSegmentationPictureBox);
         }
 
         private void RMuTextBox_TextChanged_1(object sender, EventArgs e)
@@ -521,8 +505,6 @@ namespace Pattern_Recognition_Task_2
                         LambdaGridView.Rows[i].Cells[j].Value = "0.2";
                     }
                 }
-            //LambdaGridView.Width = numOfClasses + 2;
-            //LambdaGridView.Height = numOfClasses + 1;
             
 
             for (int i = 1; i <= numOfClasses; i++)
@@ -620,28 +602,9 @@ namespace Pattern_Recognition_Task_2
 
         private void UploadColordButton_Click_1(object sender, EventArgs e)
         {
-            OpenFileDialog openFileDialog1 = new OpenFileDialog();
-            openFileDialog1.Filter = "All Picture Files |*.bmp;*.jpg;*.jpeg;*.jpe;*.png;*.tif;*.tiff;|All Files (*.*)|*.*";
-            openFileDialog1.Title = "Open an Image";
-            openFileDialog1.CheckPathExists = true;
-
-            if (openFileDialog1.ShowDialog() == DialogResult.OK)
-            {
-                coloredImage = null;
-                //Open the browsed image and display it
-                string OpenedFilePath = openFileDialog1.FileName;
-
-                coloredImage = new Bitmap(OpenedFilePath);
-                if (coloredImage == null)
-                    MessageBox.Show("Image can't be opened !", "Error", MessageBoxButtons.OK);
-                else
-                {
-                    ImagePath.Text = OpenedFilePath;
-                    coloredUploadedPictureBox.Image = coloredImage;
-                }
-
-            }
-
+            uploadImage(ref coloredImage, coloredUploadedPictureBox);
+            
+            startedTakingSamples = false;
         }
 
         private void numOfClassesTextBox_TextChanged(object sender, EventArgs e)
@@ -667,6 +630,7 @@ namespace Pattern_Recognition_Task_2
 
         private void button1_Click_2(object sender, EventArgs e)
         {
+            startedTakingSamples = true;
             lambda = new double[numOfClasses, numOfClasses + 1];
             currentClass = 0;
             currentClick = 0;
@@ -726,7 +690,10 @@ namespace Pattern_Recognition_Task_2
             {
                 for (int j = 1; j <= numOfClasses + 1; j++)
                 {
-                    LambdaLoadedGridView.Rows[i].Cells[j].Value = "0.2";
+                    if(j - 1 == i)
+                       LambdaLoadedGridView.Rows[i].Cells[j].Value = "1";
+                    else
+                        LambdaLoadedGridView.Rows[i].Cells[j].Value = "2";
                 }
             }
 
@@ -754,7 +721,7 @@ namespace Pattern_Recognition_Task_2
 
         private void coloredUploadedPictureBox_Click(object sender, EventArgs e)
         {
-            if (currentClass < numOfClasses)
+            if (startedTakingSamples && currentClass < numOfClasses)
             {
                 MouseEventArgs me = (MouseEventArgs)e;
                 Point p = me.Location;
@@ -819,6 +786,7 @@ namespace Pattern_Recognition_Task_2
 
         private void SaveImageButton_Click(object sender, EventArgs e)
         {
+            saveImage(ClassifiedUploadedPictureBox);
             SaveFileDialog dialog = new SaveFileDialog();
             dialog.Filter = "All Picture Files |*.bmp;*.jpg;*.jpeg;*.jpe;*.png;|All Files (*.*)|*.*";
             dialog.Title = "Open an Image";
@@ -828,6 +796,120 @@ namespace Pattern_Recognition_Task_2
             {
                 ClassifiedUploadedPictureBox.Image.Save(dialog.FileName, System.Drawing.Imaging.ImageFormat.Jpeg);
             }
+        }
+
+        private void parzenGetSamplesButton_Click(object sender, EventArgs e)
+        {
+           try
+            {
+                parzenNumSamples = int.Parse(parzenNumOfSamplesTextBox.Text);
+                parzenNumClasses = int.Parse(parzenNumClassesComboBox.Text);
+                parzenCurrentClick = 0;
+                parzenStartedTakingSamples = true;
+                parzenSamples = new Color[parzenNumClasses][]; 
+               
+               for (int i = 0; i < parzenNumClasses; i++)
+                {
+                    parzenSamples[i] = new Color[parzenNumSamples];
+               
+               }
+                parzenCurrentClassTextBox.Text = "1";
+                ParzenCurrentSampleTextBox.Text = "1";
+           }
+            catch(Exception)
+            {
+                MessageBox.Show("Enter Data in a correct Format !");
+            
+            }
+        }
+
+        private void parzenGenerateImageButton_Click(object sender, EventArgs e)
+        {
+            parzenIsGenerated = true;
+            parzenWindowUploadedImagePictureBox.Image = generatedImagePictureBox.Image;
+            parzenSourceBitmap = new Bitmap(generatedImagePictureBox.Image);
+            parzenNumClassesComboBox.SelectedIndex = int.Parse(NumOfClassesComboBox.Text);
+        }
+
+        private void parzenWindowUploadedImagePictureBox_Click(object sender, EventArgs e)
+        {
+            if (parzenStartedTakingSamples && parzenCurrentClick < parzenNumClasses * parzenNumSamples)
+            {
+                MouseEventArgs me = (MouseEventArgs)e;
+                Point p = me.Location;
+                p.X = (int)(((me.Location.X)) * ((double)parzenSourceBitmap.Width) / ((double)parzenWindowUploadedImagePictureBox.Width));
+                p.Y = (int)((me.Location.Y) * ((double)parzenSourceBitmap.Height) / ((double)parzenWindowUploadedImagePictureBox.Height));
+                Color c = parzenSourceBitmap.GetPixel(p.X, p.Y);
+                parzenSamples[parzenCurrentClick / parzenNumSamples][parzenCurrentClick % parzenNumSamples] = c;
+                parzenCurrentClick++;
+                if (parzenCurrentClick < parzenNumClasses * parzenNumSamples)
+                {
+                    parzenCurrentClassTextBox.Text = (1 + parzenCurrentClick / parzenNumSamples).ToString();
+                    ParzenCurrentSampleTextBox.Text = (1 + parzenCurrentClick % parzenNumSamples).ToString();
+                }
+                else
+                {
+             
+                }
+                
+           }
+        }
+
+        private void parzenUploadImageButton_Click(object sender, EventArgs e)
+        {
+            uploadImage(ref parzenSourceBitmap, parzenWindowUploadedImagePictureBox);
+            parzenIsGenerated = false;
+        }
+
+        private void button1_Click_3(object sender, EventArgs e)
+        {
+            try 
+            {
+                if (!parzenStartedTakingSamples || parzenCurrentClick < parzenNumClasses * parzenNumSamples)
+                {
+                    throw (new Exception("Please Get All samples and Enter Window Size"));
+                }
+                ParzenWindowClassifier classifier = new ParzenWindowClassifier(parzenNumClasses, parzenNumSamples, int.Parse(parzenWindowSizeTextBox.Text), parzenIsGenerated, parzenSamples);
+                ParzenWindowClassifiedImagePictureBox.Image = classifier.classifyPixels(parzenSourceBitmap);
+
+                if (parzenIsGenerated)
+                {
+                    parzenConfusionMatrix = classifier.getConfusionMatrix();
+                    ParzenConfusionMatrixDataGridView.Columns.Clear();
+
+                    for (int i = 0; i <= parzenNumClasses; i++)
+                    {
+                        string header = "";
+                        if (i > 0)
+                            header = string.Concat("class ", i.ToString());
+                        ParzenConfusionMatrixDataGridView.Columns.Add(new DataGridViewColumn() { HeaderText = header, CellTemplate = new DataGridViewTextBoxCell() });
+                    }
+
+                    for (int i = 0; i < parzenNumClasses; i++)
+                    {
+                        ParzenConfusionMatrixDataGridView.Rows.Add(new DataGridViewRow());
+                        ParzenConfusionMatrixDataGridView.Rows[i].Cells[0].Value = string.Concat("Class ", (i + 1).ToString());
+                    }
+
+                    for (int i = 0; i < parzenNumClasses; i++)
+                    {
+                        for (int j = 1; j <= parzenNumClasses; j++)
+                        {
+                            ParzenConfusionMatrixDataGridView.Rows[i].Cells[j].Value = parzenConfusionMatrix[i, j - 1];
+                        }
+                    }
+                }
+            }
+            
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void parzenSaveImageButton_Click(object sender, EventArgs e)
+        {
+            saveImage(ParzenWindowClassifiedImagePictureBox);
         }
 
         

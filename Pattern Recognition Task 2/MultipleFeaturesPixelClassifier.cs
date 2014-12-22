@@ -30,7 +30,6 @@ namespace Pattern_Recognition_Task_2
         {
             num_of_classes = numClasses;
             num_of_actions = num_of_classes + 1;
-            //slices = new GenImage.Slice[num_of_classes];
             this.muR = muR;
             this.muG = muG;
             this.muB = muB;
@@ -114,19 +113,15 @@ namespace Pattern_Recognition_Task_2
                 minRisk = Math.Min(minRisk, risk[action]);    
             }
 
-            //int leastRisk = 0;
+            
             int ret = num_of_classes;
             for (int i = 0; i < num_of_actions; i++)
             {
                 if (risk[i] == minRisk)
                 {
-                    //leastRisk++;
                     ret = i;
                 }
-                    
-
-                //if (leastRisk > 1)
-                //    return num_of_classes;
+                   
             }
             
             return ret;
@@ -153,50 +148,12 @@ namespace Pattern_Recognition_Task_2
                     int afterClassification = getPixelClass(sourceImage.GetPixel(row, col));
                     if (generated)
                     {
-                        int beforeClassification = getOriginalPixelClass(col);
+                        int beforeClassification = getOriginalPixelClass(row);
                         if (afterClassification >= 0 && afterClassification < num_of_classes)
                             confusionMatrix[beforeClassification, afterClassification]++;
                     }
 
                     classifiedImage.SetPixel(row, col, classesColors[afterClassification]);
-                    
-                    //if (afterClassification == num_of_classes)
-                    //{
-                    //    classifiedImage.SetPixel(row, col, Color.Black);
-                    //}
-                    //else
-                    //{
-                    //    for (int i = 0; i < num_of_classes; i++)
-                    //    {
-                    //        if (afterClassification == i)
-                    //        {
-                    //            classifiedImage.SetPixel(row, col, Color.Red
-                    //            break;
-                    //        }
-                    //    }
-                    
-                    //} 
-                    
-                    //if (afterClassification == 0)
-                    //{
-                    //    classifiedImage.SetPixel(row, col, Color.Red);
-                    //}
-                    //else if (afterClassification == 1)
-                    //{
-                    //    classifiedImage.SetPixel(row, col, Color.Green);
-                    //}
-                    //else if (afterClassification == 2)
-                    //{
-                    //    classifiedImage.SetPixel(row, col, Color.Blue);
-                    //}
-                    //else if (afterClassification == 3)
-                    //{
-                    //    classifiedImage.SetPixel(row, col, Color.Purple);
-                    //}
-                    //else
-                    //{
-                    //    classifiedImage.SetPixel(row, col, Color.Black);
-                    //}
                 
                 }
             }

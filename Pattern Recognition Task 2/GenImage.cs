@@ -77,15 +77,6 @@ namespace Pattern_Recognition_Task_2
                 slices[i].end =(int)(((double)(i + 1) / numOfClasses) * Width) - 1;
             }
 
-            //slices[0].start = 0;
-            //slices[0].end = width / 4;
-            //slices[1].start = slices[0].end + 1;
-            //slices[1].end = width / 2;
-            //slices[2].start = slices[1].end + 1;
-            //slices[2].end = (3 * width) / 4;
-            //slices[3].start = slices[2].end + 1;
-            //slices[3].end = width - 1;
-
             for (int i = 0; i < numOfClasses; i++)
                 FillSlices(slices[i]);
             return Img;

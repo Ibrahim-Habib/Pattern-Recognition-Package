@@ -21,9 +21,7 @@ namespace Pattern_Recognition_Task_2
         private double evidence;
         private Bitmap oldImage;
         private Bitmap newImage;
-        //private FastImage oldImageFast;
-        //private FastImage newImageFast;
-
+        
         public PixelClassifier()
         { }
 
@@ -76,27 +74,22 @@ namespace Pattern_Recognition_Task_2
             {
                 for (int column = 0; column < newImage.Height; column++)
                 {
-                    //int temp = getPixelClass(oldImageFast.GetPixel(row, column));
                     int temp = getPixelClass(oldImage.GetPixel(row, column));
                     if (temp == 0)
                     {
                         newImage.SetPixel(row, column, Color.Red);
-                        //newImageFast.Img.SetPixel(row, column, Color.Red);
                     }
                     else if (temp == 1)
                     {
                         newImage.SetPixel(row, column, Color.Lime);
-                        //newImageFast.Img.SetPixel(row, column, Color.Lime);
                     }
                     else if (temp == 2)
                     {
                         newImage.SetPixel(row, column, Color.Blue);
-                        //newImageFast.Img.SetPixel(row, column, Color.Blue);
                     }
                     else
                     {
                         newImage.SetPixel(row, column, Color.Yellow);
-                        //newImageFast.Img.SetPixel(row, column, Color.Yellow);
                     }
                 }
                 
@@ -107,9 +100,7 @@ namespace Pattern_Recognition_Task_2
         public Bitmap classifyImage(Bitmap bm)
         {
             oldImage = bm;
-            //oldImageFast = new FastImage(oldImage);
             newImage = new Bitmap(oldImage.Width, oldImage.Height,System.Drawing.Imaging.PixelFormat.Format24bppRgb);
-            //newImageFast = new FastImage(newImage);
             generatePixels();
             return newImage;
         }
